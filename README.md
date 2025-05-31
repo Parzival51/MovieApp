@@ -242,45 +242,69 @@ The app will open at http://localhost:5173 (or another port based on your config
 Environment Variables
 
 Create a .env.local (or .env) file in the Frontend folder with:
+
 bash
 Copy
 Edit
 VITE_API_BASE_URL=https://localhost:7176/api
 The frontend code uses import.meta.env.VITE_API_BASE_URL to send requests to the backend.
+
 User Registration & Login
+
 On first run, navigate to the registration page in your browser.
+
 Register a new user and check your email for a verification link (if email verification is active).
+
 Click the link in your email to activate your account.
 
 Roles & Responsibilities
 Frontend Development
 Bayram
+
 Build the React-based user interface (UI).
+
 Implement responsive design with Tailwind CSS.
+
 Make API calls via Axios.
+
 Implement form validation (using React Hook Form or equivalent).
 
 Backend Development
 Yusuf
+
 Develop ASP.NET Core Web APIs (Controllers, Services, Repositories).
+
 Implement JWT-based authentication and role-based authorization (Admin/Moderator/User).
+
 Integrate EF Core for database access and handle migrations.
+
 Integrate email verification and notification workflows (e.g., using SendGrid or SMTP).
 
 Rojhat
 
 Implement the Business layer (core business logic and services).
+
 Define DTOs and configure AutoMapper profiles.
+
 Create moderator-specific endpoints for approving/deleting reviews and comments.
+
 Prepare a test database with seeding of initial sample data.
 
 Summary
 MovieApp is a full-stack movie management system that includes:
+
 Comprehensive CRUD for movies, reviews, comments, and user management
+
 Real-time reviews and replies
+
 Role-based access control (Admin, Moderator, User)
+
 Email verification and basic notification support
+
 Responsive React frontend using Tailwind CSS, React Router, and Axios
+
 Layered ASP.NET Core backend with EF Core, AutoMapper, and clean separation of concerns
+
 JWT-based authentication and Identity-driven user/role management
+
 By following this guide, you can set up both the backend API and the frontend SPA, register new users, verify emails, and start managing your movie database in a secure, role-aware environment.
