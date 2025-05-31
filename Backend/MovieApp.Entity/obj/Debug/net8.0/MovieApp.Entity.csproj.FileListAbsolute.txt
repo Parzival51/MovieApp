@@ -1,0 +1,15 @@
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\bin\Debug\net8.0\MovieApp.Entity.deps.json
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\bin\Debug\net8.0\MovieApp.Entity.runtimeconfig.json
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\bin\Debug\net8.0\MovieApp.Entity.dll
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\bin\Debug\net8.0\MovieApp.Entity.pdb
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\obj\Debug\net8.0\MovieApp.Entity.csproj.AssemblyReference.cache
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\obj\Debug\net8.0\MovieApp.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\obj\Debug\net8.0\MovieApp.Entity.AssemblyInfoInputs.cache
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\obj\Debug\net8.0\MovieApp.Entity.AssemblyInfo.cs
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\obj\Debug\net8.0\MovieApp.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\obj\Debug\net8.0\MovieApp.Entity.sourcelink.json
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\obj\Debug\net8.0\MovieApp.Entity.dll
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\obj\Debug\net8.0\refint\MovieApp.Entity.dll
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\obj\Debug\net8.0\MovieApp.Entity.pdb
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\obj\Debug\net8.0\MovieApp.Entity.genruntimeconfig.cache
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.Entity\obj\Debug\net8.0\ref\MovieApp.Entity.dll

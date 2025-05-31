@@ -1,0 +1,16 @@
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\bin\Debug\net8.0\MovieApp.DTO.deps.json
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\bin\Debug\net8.0\MovieApp.DTO.dll
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\bin\Debug\net8.0\MovieApp.DTO.pdb
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\bin\Debug\net8.0\MovieApp.Entity.dll
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\bin\Debug\net8.0\MovieApp.Entity.pdb
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\obj\Debug\net8.0\MovieApp.DTO.csproj.AssemblyReference.cache
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\obj\Debug\net8.0\MovieApp.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\obj\Debug\net8.0\MovieApp.DTO.AssemblyInfoInputs.cache
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\obj\Debug\net8.0\MovieApp.DTO.AssemblyInfo.cs
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\obj\Debug\net8.0\MovieApp.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\obj\Debug\net8.0\MovieApp.DTO.sourcelink.json
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\obj\Debug\net8.0\MovieApp.CF8A22C4.Up2Date
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\obj\Debug\net8.0\MovieApp.DTO.dll
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\obj\Debug\net8.0\refint\MovieApp.DTO.dll
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\obj\Debug\net8.0\MovieApp.DTO.pdb
+C:\Users\Yusuf emre gözcü\Desktop\MovieApp\Backend\MovieApp.DTO\obj\Debug\net8.0\ref\MovieApp.DTO.dll

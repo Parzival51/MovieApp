@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yusuf emre gözcü\\source\\repos\\Backend\\Backend\\Backend.csproj",
+      "projectUniqueName": "C:\\Users\\Yusuf emre gözcü\\Desktop\\MovieApp\\Backend\\Backend\\Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "C:\\Users\\Yusuf emre gözcü\\source\\repos\\Backend\\Backend\\Backend.csproj",
+      "projectPath": "C:\\Users\\Yusuf emre gözcü\\Desktop\\MovieApp\\Backend\\Backend\\Backend.csproj",
       "packagesPath": "C:\\Users\\Yusuf emre gözcü\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yusuf emre gözcü\\source\\repos\\Backend\\Backend\\obj\\",
+      "outputPath": "C:\\Users\\Yusuf emre gözcü\\Desktop\\MovieApp\\Backend\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Yusuf emre gözcü\\AppData\\Roaming\\NuGet\\NuGet.Config",
