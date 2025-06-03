@@ -26,14 +26,12 @@ export function getMoviesByActor(actorId) {
     .then(r => r.data);
 }
 
-// Kullanıcı ortalama puanı getir
 export function getActorAverageRating(actorId) {
   return client
     .get(`/actors/${actorId}/rating`)
     .then(r => r.data.average);
 }
 
-// Aktöre oy ver/güncelle
 export function rateActor(actorId, score) {
   return client
     .put(`/actors/${actorId}/rating`, { score })

@@ -11,7 +11,6 @@ export default function ActorFormWizard({ initial = null, loading = false, onSav
     bio: ''
   });
 
-  // Populate form when initial data arrives
   useEffect(() => {
     if (initial) {
       setForm({
@@ -126,7 +125,4 @@ export default function ActorFormWizard({ initial = null, loading = false, onSav
   );
 }
 
-/* Helper step-dot class in index.css:
-.step-dot { @apply w-6 h-6 flex items-center justify-center text-xs rounded-full bg-muted/30; }
-.step-dot.active { @apply bg-secondary text-black; }
-*/
+

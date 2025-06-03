@@ -10,7 +10,6 @@ export function ThemeProvider({ children }) {
     localStorage.getItem('theme') || getSystemPref()
   );
 
-  /* sınıfı <html> etiketine uygula */
   useEffect(() => {
     const html = document.documentElement;
     html.classList.toggle('dark', mode === 'dark');

@@ -26,7 +26,6 @@ namespace MovieApp.API.Controllers
             _mapper = mapper;
         }
 
-        // GET: api/comments?reviewId={guid}
         [HttpGet, AllowAnonymous]
         public async Task<IActionResult> GetAll([FromQuery] Guid? reviewId)
         {
@@ -39,7 +38,6 @@ namespace MovieApp.API.Controllers
             return Ok(_mapper.Map<IEnumerable<CommentListDto>>(comments));
         }
 
-        // GET: api/comments/{id}
         [HttpGet("{id:guid}"), AllowAnonymous]
         public async Task<IActionResult> GetById(Guid id)
         {
@@ -49,7 +47,6 @@ namespace MovieApp.API.Controllers
             return Ok(dto);
         }
 
-        // POST: api/comments
         [HttpPost, Authorize]
         public async Task<IActionResult> Create([FromBody] CreateCommentDto dto)
         {
@@ -65,7 +62,6 @@ namespace MovieApp.API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = resultDto.Id }, resultDto);
         }
 
-        // PUT: api/comments/{id}
         [HttpPut("{id:guid}"), Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateCommentDto dto)
         {
@@ -75,7 +71,6 @@ namespace MovieApp.API.Controllers
             return NoContent();
         }
 
-        // DELETE: api/comments/{id}
         [HttpDelete("{id:guid}"), Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Delete(Guid id)
         {
@@ -91,7 +86,6 @@ namespace MovieApp.API.Controllers
             return Ok(_mapper.Map<IEnumerable<CommentListDto>>(list));
         }
 
-        // PUT: api/comments/{id}/approve
         [HttpPut("{id:guid}/approve"), Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Approve(Guid id)
         {

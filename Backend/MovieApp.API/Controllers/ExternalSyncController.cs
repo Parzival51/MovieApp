@@ -51,14 +51,11 @@ namespace MovieApp.API.Controllers
         [HttpPost("movie/{tmdbId}/sync")]
         public async Task<IActionResult> SyncMovie(int tmdbId)
         {
-            // 1) TMDb’den full details çek
             var details = await _external.GetFullDetailsAsync(_tmdbApiKey, tmdbId);
 
-            // 2) CreateMovieDto’ya map et ve ExternalId ata
             var dto = _mapper.Map<CreateMovieDto>(details);
             dto.ExternalId = details.id;
 
-            // 3) Spoken languages
             dto.SpokenLanguageCodes.Clear();
             foreach (var sl in details.spoken_languages)
             {
@@ -78,7 +75,6 @@ namespace MovieApp.API.Controllers
                 }
             }
 
-            // 4) Türler
             dto.GenreIds.Clear();
             foreach (var g in details.genres)
             {
@@ -93,7 +89,6 @@ namespace MovieApp.API.Controllers
                 }
             }
 
-            // 5) Cast (aktör + karakter + sıra)
             dto.Cast.Clear();
             foreach (var c in details.credits.cast
                                  .OrderBy(c => c.order)
@@ -134,7 +129,6 @@ namespace MovieApp.API.Controllers
                 });
             }
 
-            // 6) Yönetmenler
             dto.DirectorIds.Clear();
             foreach (var cr in details.credits.crew.Where(x => x.job == "Director"))
             {
@@ -167,7 +161,6 @@ namespace MovieApp.API.Controllers
                 dto.DirectorIds.Add(dir.Id);
             }
 
-            // 7) Görseller (ImageMetas)
             dto.ImageMetas.Clear();
             foreach (var img in details.images.posters)
             {
@@ -192,7 +185,6 @@ namespace MovieApp.API.Controllers
                 });
             }
 
-            // 8) İdempotent Upsert
             var movie = await _movieService.UpsertFromExternalAsync(dto);
 
             return Ok(new

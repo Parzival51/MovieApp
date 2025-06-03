@@ -7,9 +7,8 @@ import useAuth from '../hooks/useAuth';
 export default function Header() {
   const { tokens, user, logout } = useAuth();
   const navigate  = useNavigate();
-  const [open, setOpen] = useState(false);      // mobil menü
+  const [open, setOpen] = useState(false);    
 
-  /* ------ yetki / durum ------ */
   const roles       = Array.isArray(user?.roles) ? user.roles : [];
   const isAdmin     = roles.includes('Admin');
   const isLoggedIn  = Boolean(tokens);
@@ -19,7 +18,6 @@ export default function Header() {
     navigate('/login', { replace: true });
   };
 
-  /* ------ yardımcı class ------ */
   const linkCls = 'text-muted hover:text-accent transition-colors';
 
   return (

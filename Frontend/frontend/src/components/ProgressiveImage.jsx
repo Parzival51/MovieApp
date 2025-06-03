@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
 
-/**
- *  <ProgressiveImage src="poster.jpg" alt="…" className="w-full h-full object-cover"/>
- *  • Tarayıcı “lazy” yükler
- *  • Yüklenene kadar hafif blur + gri arkaplan
- */
+
 export default function ProgressiveImage({ src, alt = '', className = '' }) {
   const [loaded, setLoaded] = useState(false);
 

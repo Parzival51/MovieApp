@@ -16,13 +16,13 @@ namespace MovieApp.API.Controllers
     [ApiController]
     public class WatchlistsController : ControllerBase
     {
-        private readonly MovieAppDbContext _ctx;          // ← yeni
+        private readonly MovieAppDbContext _ctx;          
         private readonly IGenericService<Watchlist> _svc;
         private readonly IMovieService _movieSvc;
         private readonly IMapper _mapper;
 
         public WatchlistsController(
-            MovieAppDbContext ctx,          // ← ctor’a eklendi
+            MovieAppDbContext ctx,         
             IGenericService<Watchlist> svc,
             IMovieService movieSvc,
             IMapper mapper)
@@ -33,13 +33,12 @@ namespace MovieApp.API.Controllers
             _mapper = mapper;
         }
 
-        /* ─── Login kullanıcısının listesi ─── */
         [HttpGet, Authorize]
         public async Task<IActionResult> GetMine()
         {
             var uid = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 
-            var list = await _ctx.Watchlists            // DbContext + Include
+            var list = await _ctx.Watchlists           
                                  .Include(w => w.Movie)
                                  .Where(w => w.UserId == uid)
                                  .ToListAsync();
@@ -47,7 +46,6 @@ namespace MovieApp.API.Controllers
             return Ok(_mapper.Map<IEnumerable<WatchlistListDto>>(list));
         }
 
-        /* (Admin tüm kayıtları görmek isterse) */
         [HttpGet("all"), Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAll()
         {
@@ -58,7 +56,6 @@ namespace MovieApp.API.Controllers
             return Ok(_mapper.Map<IEnumerable<WatchlistListDto>>(all));
         }
 
-        /* ─── Ekle ─── */
         [HttpPost, Authorize]
         public async Task<IActionResult> Add([FromBody] CreateWatchlistDto dto)
         {
@@ -68,7 +65,6 @@ namespace MovieApp.API.Controllers
             var entity = _mapper.Map<Watchlist>(dto);
             var created = await _svc.CreateAsync(entity);
 
-            // Tek seferde Movie’yi çekelim ki DTO dolu dönsün
             created = await _ctx.Watchlists
                                 .Include(w => w.Movie)
                                 .FirstAsync(w => w.Id == created.Id);
@@ -76,7 +72,6 @@ namespace MovieApp.API.Controllers
             return Ok(_mapper.Map<WatchlistDetailDto>(created));
         }
 
-        /* ─── Sil ─── */
         [HttpDelete("{id:guid}"), Authorize]
         public async Task<IActionResult> Remove(Guid id)
         {

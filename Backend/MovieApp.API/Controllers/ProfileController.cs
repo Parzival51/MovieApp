@@ -8,7 +8,7 @@ using System.Security.Claims;
 
 namespace MovieApp.API.Controllers
 {
-    [Authorize]                                 // ↔ sadece oturum sahipleri
+    [Authorize]                               
     [Route("api/profile")]
     [ApiController]
     public class ProfileController : ControllerBase
@@ -26,7 +26,7 @@ namespace MovieApp.API.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]                           // GET /api/profile
+        [HttpGet]                           
         public async Task<IActionResult> GetMe()
         {
             var uid = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));

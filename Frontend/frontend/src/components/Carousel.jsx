@@ -2,16 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/**
- * Basit yatay carousel
- *
- * Props
- *  - items        : any[]               – liste verisi
- *  - renderItem   : (item) => ReactNode – kartı nasıl çizeceğiz
- *  - prev / next  : () => void          – buton callback’leri
- *  - visibleCount : number              – aynı anda kaç kart görünsün
- *  - current      : number              – aktif indeks (parent state)
- */
+
 export default function Carousel({
   items = [],
   renderItem,
@@ -23,9 +14,7 @@ export default function Carousel({
   const list = Array.isArray(items) ? items : [];
   if (list.length === 0) return null;
 
-  // Her kart için yüzde genişlik
   const widthPct = 100 / visibleCount;
-  // İndeks sınırları
   const maxIndex = Math.max(0, list.length - visibleCount);
   const idx = Math.min(Math.max(current, 0), maxIndex);
 

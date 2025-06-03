@@ -8,5 +8,5 @@ export function getActivityLogs({ from, to, action, page = 1, pageSize = 100 }) 
 
   return client
     .get(`/activitylogs?${params.toString()}`)
-    .then(r => r.data);                 // API list ([]) döndürür
+    .then(r => r.data);                 
 }

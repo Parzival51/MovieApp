@@ -17,13 +17,13 @@ namespace MovieApp.API.Controllers
     [ApiController]
     public class FavoritesController : ControllerBase
     {
-        private readonly MovieAppDbContext _ctx;         // ← yeni
+        private readonly MovieAppDbContext _ctx;      
         private readonly IGenericService<Favorite> _svc;
         private readonly IMovieService _movieSvc;
         private readonly IMapper _mapper;
 
         public FavoritesController(
-            MovieAppDbContext ctx,           // ← ctor’a eklendi
+            MovieAppDbContext ctx,          
             IGenericService<Favorite> svc,
             IMovieService movieSvc,
             IMapper mapper)
@@ -34,7 +34,6 @@ namespace MovieApp.API.Controllers
             _mapper = mapper;
         }
 
-        /* ─── Login kullanıcısının favorileri ─── */
         [HttpGet, Authorize]
         public async Task<IActionResult> GetMine()
         {
@@ -48,7 +47,6 @@ namespace MovieApp.API.Controllers
             return Ok(_mapper.Map<IEnumerable<FavoriteListDto>>(list));
         }
 
-        /* (Admin gözetimi) */
         [HttpGet("all"), Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAll()
         {
@@ -59,7 +57,6 @@ namespace MovieApp.API.Controllers
             return Ok(_mapper.Map<IEnumerable<FavoriteListDto>>(all));
         }
 
-        /* ─── Ekle ─── */
         [HttpPost, Authorize]
         public async Task<IActionResult> Add([FromBody] CreateFavoriteDto dto)
         {
@@ -76,7 +73,6 @@ namespace MovieApp.API.Controllers
             return Ok(_mapper.Map<FavoriteDetailDto>(created));
         }
 
-        /* ─── Sil ─── */
         [HttpDelete("{id:guid}"), Authorize]
         public async Task<IActionResult> Remove(Guid id)
         {

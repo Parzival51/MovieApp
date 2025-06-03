@@ -23,7 +23,7 @@ namespace MovieApp.API.Controllers
             _mapper = mapper;
         }
 
-        // GET: api/Genres
+
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -32,7 +32,6 @@ namespace MovieApp.API.Controllers
             return Ok(dtos);
         }
 
-        // GET: api/Genres/{id}
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> GetById(Guid id)
         {
@@ -43,8 +42,6 @@ namespace MovieApp.API.Controllers
             return Ok(dto);
         }
 
-        // POST: api/Genres
-        // Admin yetkisi gerekli
         [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateGenreDto dto)
@@ -56,8 +53,6 @@ namespace MovieApp.API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = created.Id }, resultDto);
         }
 
-        // PUT: api/Genres/{id}
-        // Admin yetkisi gerekli
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateGenreDto dto)
@@ -79,9 +74,6 @@ namespace MovieApp.API.Controllers
             return NoContent();
         }
 
-
-        // DELETE: api/Genres/{id}
-        // Admin yetkisi gerekli
         [Authorize(Roles = "Admin")]
         [HttpDelete("{id:guid}")]
         public async Task<IActionResult> Delete(Guid id)

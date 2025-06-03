@@ -10,7 +10,7 @@ namespace MovieApp.DataAccess.Abstract
     public interface IRatingRepository : IGenericRepository<Rating>
     {
         Task<Rating?> GetByMovieAndUserAsync(Guid movieId, Guid userId);
-        Task<IEnumerable<Rating>> GetByMovieAsync(Guid movieId);     // ★
+        Task<IEnumerable<Rating>> GetByMovieAsync(Guid movieId);     
 
         Task<IEnumerable<Rating>> GetAllAsync();
     }

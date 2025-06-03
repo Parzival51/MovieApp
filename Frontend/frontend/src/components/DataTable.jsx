@@ -2,23 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
-/**
- * columns = [
- *   { key:'title',  label:'Başlık',  sortable:true,  className:'w-1/3' },
- *   { key:'year',   label:'Yıl',     sortable:false },
- *   …
- * ]
- *
- * <DataTable
- *   columns={columns}
- *   data={rows}
- *   sortKey={key}
- *   sortDir={'asc'|'desc'}
- *   onSort={(key,dir)=>…}
- *   loading={false}
- *   renderRow={row => <tr>…</tr>}
- * />
- */
+
 export default function DataTable({
   columns,
   data,
@@ -28,7 +12,6 @@ export default function DataTable({
   loading = false,
   renderRow
 }) {
-  /* Skeleton satır sayısı */
   const skeletonRows = 5;
 
   const toggleSort = key => {

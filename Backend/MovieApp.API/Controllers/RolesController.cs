@@ -22,7 +22,6 @@ namespace MovieApp.API.Controllers
             _mapper = mapper;
         }
 
-        // GET: api/roles
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -31,7 +30,6 @@ namespace MovieApp.API.Controllers
             return Ok(dtos);
         }
 
-        // GET: api/roles/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(Guid id)
         {
@@ -43,7 +41,6 @@ namespace MovieApp.API.Controllers
             return Ok(dto);
         }
 
-        // POST: api/roles
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateRoleDto dto)
         {
@@ -53,7 +50,6 @@ namespace MovieApp.API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = resultDto.Id }, resultDto);
         }
 
-        // PUT: api/roles/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateRoleDto dto)
         {
@@ -65,7 +61,6 @@ namespace MovieApp.API.Controllers
             return NoContent();
         }
 
-        // DELETE: api/roles/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {

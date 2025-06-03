@@ -1,5 +1,5 @@
+// src/pages/AuthPages/RegisterPage.jsx
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Layout   from '../../components/Layout';
 import Field    from '../../components/Field';
 import Button   from '../../components/Button';
@@ -7,14 +7,13 @@ import useAuth  from '../../hooks/useAuth';
 
 export default function RegisterPage() {
   const { register } = useAuth();
-  const navigate     = useNavigate();
-
   const [displayName, setDisplayName] = useState('');
   const [email,       setEmail]       = useState('');
   const [userName,    setUserName]    = useState('');
   const [password,    setPassword]    = useState('');
   const [confirmPass, setConfirmPass] = useState('');
   const [error,       setError]       = useState(null);
+  const [info,        setInfo]        = useState(null);
   const [loading,     setLoading]     = useState(false);
 
   const handleSubmit = async e => {
@@ -25,11 +24,12 @@ export default function RegisterPage() {
     }
     setLoading(true);
     setError(null);
+    setInfo(null);
+
     try {
-      await register({ userName, displayName, email, password });
-      navigate('/login', { replace: true });
+      const res = await register({ userName, displayName, email, password });
+      setInfo(res.Message || 'Kayıt başarılı. Lütfen e-posta adresinizi doğrulayın.');
     } catch (err) {
-      console.error('Register error:', err);
       setError(err.response?.data || 'Kayıt başarısız');
     } finally {
       setLoading(false);
@@ -50,7 +50,6 @@ export default function RegisterPage() {
             </p>
           </div>
 
-          {/* İsim */}
           <Field label="İsim">
             <input
               type="text"
@@ -61,7 +60,6 @@ export default function RegisterPage() {
             />
           </Field>
 
-          {/* E-posta */}
           <Field label="E-posta">
             <input
               type="email"
@@ -72,7 +70,6 @@ export default function RegisterPage() {
             />
           </Field>
 
-          {/* Kullanıcı Adı */}
           <Field label="Kullanıcı Adı">
             <input
               type="text"
@@ -83,7 +80,6 @@ export default function RegisterPage() {
             />
           </Field>
 
-          {/* Şifre */}
           <Field label="Şifre">
             <input
               type="password"
@@ -94,7 +90,6 @@ export default function RegisterPage() {
             />
           </Field>
 
-          {/* Şifre Tekrar */}
           <Field label="Şifre (Tekrar)">
             <input
               type="password"
@@ -105,10 +100,9 @@ export default function RegisterPage() {
             />
           </Field>
 
-          {/* Hata mesajı */}
           {error && <p className="text-danger text-sm">{error}</p>}
+          {info  && <p className="text-primary text-sm">{info}</p>}
 
-          {/* Submit */}
           <Button
             type="submit"
             variant="primary"

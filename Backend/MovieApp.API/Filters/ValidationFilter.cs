@@ -9,7 +9,6 @@ namespace MovieApp.API.Filters
         {
             if (!context.ModelState.IsValid)
             {
-                // Her bir alanın hatalarını al
                 var errors = context.ModelState
                     .Where(kvp => kvp.Value.Errors.Any())
                     .ToDictionary(
@@ -17,7 +16,6 @@ namespace MovieApp.API.Filters
                         kvp => kvp.Value.Errors.Select(e => e.ErrorMessage).ToArray()
                     );
 
-                // Custom JSON formatı
                 var responseObj = new
                 {
                     Message = "Validation Failed",
@@ -30,7 +28,6 @@ namespace MovieApp.API.Filters
 
         public void OnActionExecuted(ActionExecutedContext context)
         {
-            // İşe yaramaz, burada bir şey yapmıyoruz
         }
     }
 }

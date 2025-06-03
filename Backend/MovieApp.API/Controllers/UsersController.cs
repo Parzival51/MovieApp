@@ -23,9 +23,7 @@ namespace MovieApp.API.Controllers
             _mapper = mapper;
         }
 
-        /* ────────────────────────────────────────────────────────────────
-           1. Yeni kullanıcı oluştur
-        ───────────────────────────────────────────────────────────────── */
+       
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateUserDto dto)
         {
@@ -33,9 +31,7 @@ namespace MovieApp.API.Controllers
             return result.Succeeded ? Ok() : BadRequest(result.Errors);
         }
 
-        /* ────────────────────────────────────────────────────────────────
-           2. ROLLERİ GÜNCELLE  (PUT /users/{id}/roles)
-        ───────────────────────────────────────────────────────────────── */
+    
         [HttpPut("{userId:guid}/roles")]
         public async Task<IActionResult> UpdateRoles(Guid userId,
             [FromBody] UpdateUserRolesDto dto)
@@ -44,9 +40,7 @@ namespace MovieApp.API.Controllers
             return NoContent();
         }
 
-        /* ────────────────────────────────────────────────────────────────
-           3. Belirli roldeki kullanıcıları listele
-        ───────────────────────────────────────────────────────────────── */
+     
         [HttpGet("role/{roleName}")]
         public async Task<IActionResult> GetByRole(string roleName)
         {
@@ -54,9 +48,7 @@ namespace MovieApp.API.Controllers
             return Ok(list);
         }
 
-        /* ────────────────────────────────────────────────────────────────
-           4. Tüm kullanıcıları listele
-        ───────────────────────────────────────────────────────────────── */
+        
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -64,9 +56,7 @@ namespace MovieApp.API.Controllers
             return Ok(list);
         }
 
-        /* ────────────────────────────────────────────────────────────────
-           5. Kullanıcı sil
-        ───────────────────────────────────────────────────────────────── */
+   
         [HttpDelete("{id:guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {

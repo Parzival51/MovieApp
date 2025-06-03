@@ -17,13 +17,13 @@ namespace MovieApp.API.Controllers
         private readonly IRatingService _ratings;
         private readonly IMovieService _movies;
         private readonly IMapper _mapper;
-        private readonly IHttpContextAccessor _ctx;       // ★ eklendi
+        private readonly IHttpContextAccessor _ctx;      
 
         public RatingsController(
             IRatingService ratings,
             IMovieService movies,
             IMapper mapper,
-            IHttpContextAccessor ctx)                     // ★ ctor param
+            IHttpContextAccessor ctx)                     
         {
             _ratings = ratings;
             _movies = movies;
@@ -31,12 +31,7 @@ namespace MovieApp.API.Controllers
             _ctx = ctx;
         }
 
-        /*────────────────────────────  GET (filtreli)  ───────────────────────────
-           /api/ratings?movieId={m}&mine=1   →  giriş yapan kullanıcının puanı
-           /api/ratings?movieId={m}          →  filme ait tüm puanlar
-           /api/ratings?userId  ={u}         →  kullanıcının tüm puanları
-           (hiçbiri yoksa)                   →  tüm kayıtlar
-        -------------------------------------------------------------------------*/
+       
         [HttpGet, AllowAnonymous]
         public async Task<ActionResult<IEnumerable<RatingListDto>>> Get(
             [FromQuery] Guid? movieId,
@@ -63,7 +58,6 @@ namespace MovieApp.API.Controllers
             return Ok(_mapper.Map<IEnumerable<RatingListDto>>(list));
         }
 
-        /*────────────────────────────  GET by Id  ───────────────────────────────*/
         [HttpGet("{id:guid}"), AllowAnonymous]
         public async Task<ActionResult<RatingDetailDto>> GetById(Guid id)
         {
@@ -73,22 +67,19 @@ namespace MovieApp.API.Controllers
                  : Ok(_mapper.Map<RatingDetailDto>(rating));
         }
 
-        /*────────────────────────────  UPSERT  ───────────────────────────────────*/
-        /// <summary> Aynı kullanıcı-film kaydı varsa günceller, yoksa ekler. </summary>
-        [HttpPost("upsert"), Authorize]                     // ★ route sabitlendi
+        [HttpPost("upsert"), Authorize]                    
         public async Task<ActionResult<RatingDetailDto>> Upsert([FromBody] CreateRatingDto dto)
         {
             if (await _movies.GetByIdAsync(dto.MovieId) is null)
                 return NotFound($"Movie {dto.MovieId} not found");
 
-            var entity = _mapper.Map<Rating>(dto);        // UserId → GenericManager
+            var entity = _mapper.Map<Rating>(dto);       
             var saved = await _ratings.AddOrUpdateAsync(entity);
             var payload = _mapper.Map<RatingDetailDto>(saved);
 
-            return Ok(payload);                            // 200 + güncel satır
+            return Ok(payload);                     
         }
 
-        /*────────────────────────────  DELETE  ───────────────────────────────────*/
         [HttpDelete("{id:guid}"), Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Delete(Guid id)
         {

@@ -18,7 +18,6 @@ export function getMovieById(id) {
   return client.get(`/movies/${id}`).then(r => r.data);
 }
 
-// filtreli arama ve tür bazlı sayfalı liste:
 export function searchMovies(q, page = 1, pageSize = 20) {
   const query = encodeURIComponent(q);
   return client
@@ -32,7 +31,6 @@ export function getByGenre(genreId, page = 1, pageSize = 20) {
     .then(r => r.data);
 }
 
-/* ───────── ADMIN CRUD (değişmedi) ───────── */
 export function createMovie(dto)      { return client.post('/movies', dto).then(r => r.data); }
 export function updateMovie(dto)      { return client.put(`/movies/${dto.id}`, dto).then(r => r.data); }
 export function deleteMovie(id)       { return client.delete(`/movies/${id}`); }

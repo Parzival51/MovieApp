@@ -24,8 +24,7 @@ namespace MovieApp.API.Controllers
             _mapper = mapper;
         }
 
-        // GET: api/activitylogs
-        // GET: api/activitylogs
+
         [HttpGet]
         public async Task<IActionResult> GetPaged(
                 [FromQuery] Guid? userId = null,
@@ -40,7 +39,6 @@ namespace MovieApp.API.Controllers
         }
 
 
-        // GET: api/activitylogs/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(Guid id)
         {
@@ -52,7 +50,6 @@ namespace MovieApp.API.Controllers
             return Ok(dto);
         }
 
-        // GET: api/activitylogs/user/{userId}
         [HttpGet("user/{userId}")]
         public async Task<IActionResult> GetByUser(Guid userId)
         {

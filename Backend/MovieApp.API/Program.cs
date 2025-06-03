@@ -10,82 +10,84 @@ using MovieApp.API.Filters;
 using MovieApp.Business.Abstract;
 using MovieApp.Business.Concrete;
 using MovieApp.Business.Configurations;
-using MovieApp.DataAccess.Abstract;
-using MovieApp.DataAccess.Concrete;
+using MovieApp.Business.Utilities.Results;
 using MovieApp.DataAccess.Context;
+using MovieApp.DataAccess.Models;
 using MovieApp.Entity.Entities;
 using System.Net;
 using System.Security.Claims;
 using System.Text;
+using System.Text.Encodings.Web;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
-builder.Services.AddCors(options =>
+/* ---------- CORS ---------- */
+builder.Services.AddCors(opt =>
 {
-    options.AddPolicy("AllowLocalDev", policy =>
-    {
-        policy
-            .WithOrigins("http://localhost:5173") 
-            .AllowAnyHeader()
-            .AllowAnyMethod()
-            .AllowCredentials();
-    });
+    opt.AddPolicy("AllowLocalDev", p =>
+        p.SetIsOriginAllowed(origin =>
+        {
+            var uri = new Uri(origin);
+            return uri.Host == "localhost" && uri.Port == 5173;
+        })
+         .AllowAnyHeader()
+         .AllowAnyMethod()
+         .AllowCredentials());
 });
+/* ---------- DbContext ---------- */
+builder.Services.AddDbContext<MovieAppDbContext>(o =>
+    o.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddDbContext<MovieAppDbContext>(options =>
-    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
-);
+/* ---------- SMTP & URL Options ---------- */
+builder.Services.Configure<SmtpSettings>(configuration.GetSection("SmtpSettings"));
+builder.Services.Configure<AppUrlsOptions>(configuration.GetSection("AppUrls"));
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 
+/* ---------- Infrastructure & Identity ---------- */
 builder.Services.AddInfrastructure(configuration);
 
-builder.Services.AddHttpClient<IExternalMovieService, ExternalMovieService>(c =>
+builder.Services.AddIdentity<User, Role>(o =>
 {
-    c.BaseAddress = new Uri("https://api.themoviedb.org/3/");
-});
-
-builder.Services.AddScoped<IGenreService, GenreManager>();
-builder.Services.AddScoped<IActorService, ActorManager>();
-builder.Services.AddScoped<IDirectorService, DirectorManager>();
-
-
-builder.Services.AddIdentity<User, Role>(opts =>
-{
-    opts.Password.RequiredLength = 6;
-    opts.Password.RequireDigit = false;
-    opts.Password.RequireLowercase = true;
-    opts.Password.RequireUppercase = false;
-    opts.User.RequireUniqueEmail = true;
+    o.Password.RequiredLength = 6;
+    o.Password.RequireDigit = false;
+    o.Password.RequireLowercase = true;
+    o.Password.RequireUppercase = false;
+    o.User.RequireUniqueEmail = true;
 })
 .AddEntityFrameworkStores<MovieAppDbContext>()
 .AddDefaultTokenProviders();
 
+/* ---------- JWT ---------- */
 builder.Services.Configure<JwtTokenOptions>(configuration.GetSection("TokenOptions"));
+var jwt = configuration.GetSection("TokenOptions").Get<JwtTokenOptions>();
 
-var jwtOptions = configuration.GetSection("TokenOptions").Get<JwtTokenOptions>();
-builder.Services.AddAuthentication(options =>
+builder.Services.AddAuthentication(a =>
 {
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    a.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    a.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
-.AddJwtBearer(options =>
+.AddJwtBearer(o =>
 {
-    options.RequireHttpsMetadata = false;
-    options.SaveToken = true;
-    options.TokenValidationParameters = new TokenValidationParameters
+    o.RequireHttpsMetadata = false;
+    o.SaveToken = true;
+    o.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
         ValidateAudience = true,
         ValidateLifetime = true,
-        ValidIssuer = jwtOptions.Issuer,
-        ValidAudience = jwtOptions.Audience,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.Key)),
         ClockSkew = TimeSpan.Zero,
+        ValidIssuer = jwt.Issuer,
+        ValidAudience = jwt.Audience,
+        IssuerSigningKey = new SymmetricSecurityKey(
+                                      Encoding.UTF8.GetBytes(jwt.Key)),
         NameClaimType = ClaimTypes.NameIdentifier
     };
 });
 
+/* ---------- DI ---------- */
+builder.Services.AddSingleton(UrlEncoder.Default);
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<IAuthService, AuthManager>();
 builder.Services.AddScoped<IUserService, UserManagerService>();
@@ -93,70 +95,48 @@ builder.Services.AddScoped<IUserService, UserManagerService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddMemoryCache();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddHttpClient<IExternalMovieService, ExternalMovieService>();
+builder.Services.AddHttpClient<IExternalPersonService, ExternalPersonService>();
 
-
-builder.Services
-    .AddControllers(options =>
-    {
-        options.Filters.Add<ValidationFilter>();
-    })
-    .AddJsonOptions(opt =>
-        opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles
-    );
+/* ---------- MVC ---------- */
+builder.Services.AddControllers(c => c.Filters.Add<ValidationFilter>())
+                .AddJsonOptions(j =>
+                    j.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+/* ---------- Build & Middleware ---------- */
 var app = builder.Build();
 
-
-
 if (app.Environment.IsDevelopment())
-{
     app.UseDeveloperExceptionPage();
-}
 else
-{
     app.UseExceptionHandler("/error");
-}
 
-app.Map("/error", (HttpContext http) =>
+app.Map("/error", (HttpContext ctx) =>
 {
-    var feature = http.Features.Get<IExceptionHandlerFeature>();
-    var ex = feature?.Error;
-
-    var pd = new ProblemDetails
+    var ex = ctx.Features.Get<IExceptionHandlerFeature>()?.Error;
+    return Results.Problem(new ProblemDetails
     {
         Status = (int)HttpStatusCode.InternalServerError,
         Title = "Sunucu hatasý",
         Detail = ex?.Message
-    };
-
-    return Results.Problem(pd);
+    });
 });
 
-app.UseCors("AllowLocalDev");
-
-app.UseHttpsRedirection();
 
 
-
+/* ---------- Rol seed ---------- */
 using (var scope = app.Services.CreateScope())
 {
     var roleMgr = scope.ServiceProvider.GetRequiredService<RoleManager<Role>>();
-    var roles = new[] { "Admin", "User", "Moderator" };
-
-    foreach (var roleName in roles)
-    {
-        if (!await roleMgr.RoleExistsAsync(roleName))
-        {
-            var result = await roleMgr.CreateAsync(new Role { Name = roleName });
-            if (!result.Succeeded)
-                throw new Exception($"Rol oluþturulamadý: {roleName} — {string.Join(", ", result.Errors.Select(e => e.Description))}");
-        }
-    }
+    foreach (var role in new[] { "Admin", "User", "Moderator" })
+        if (!await roleMgr.RoleExistsAsync(role))
+            await roleMgr.CreateAsync(new Role { Name = role });
 }
 
+/* ---------- Cookie, Auth, Routing ---------- */
 app.UseCookiePolicy(new CookiePolicyOptions
 {
     MinimumSameSitePolicy = SameSiteMode.Strict,
@@ -165,13 +145,10 @@ app.UseCookiePolicy(new CookiePolicyOptions
 });
 
 
-
+app.UseCors("AllowLocalDev");
+app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
-
-
 
 app.Run();

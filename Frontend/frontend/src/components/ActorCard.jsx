@@ -7,13 +7,13 @@ import ProgressiveImage from './ProgressiveImage';
 
 export default function ActorCard({ actor }) {
   return (
-    <Link to={`/actors/${actor.id}`}>  {/* Link to detay sayfası */}
+    <Link to={`/actors/${actor.id}`}>  {}
       <Card
         hover
         padding={false}
         className="cursor-pointer group overflow-hidden"
       >
-        {/* Fotoğraf bölümü: 2:3 görüntü oranı */}
+        {}
         <div className="relative aspect-[2/3]">
           <ProgressiveImage
             src={actor.photoUrl}
@@ -22,7 +22,7 @@ export default function ActorCard({ actor }) {
           />
         </div>
 
-        {/* İsim bölümü */}
+        {}
         <div className="p-4">
           <h4 className="text-sm font-medium truncate text-center text-surface-900 dark:text-surface-100">
             {actor.name}

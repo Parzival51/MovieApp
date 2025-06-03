@@ -17,13 +17,7 @@ const variants = {
   ghost:     'bg-transparent text-secondary hover:bg-secondary/10'
 };
 
-/**
- * Custom Button component that can render as a native <button> or any other component (e.g. react-router-dom's Link).
- *
- * Usage:
- *   <Button variant="primary" size="md">Click me</Button>
- *   <Button as={Link} to="/path" variant="ghost" size="sm">Go</Button>
- */
+
 export default function Button({
   as: Component = 'button',
   to,
@@ -35,7 +29,6 @@ export default function Button({
 }) {
   const cls = clsx(base, sizes[size], variants[variant], className);
 
-  // Determine props for the rendered component
   const componentProps =
     Component === 'button'
       ? { type: rest.type ?? 'button' }

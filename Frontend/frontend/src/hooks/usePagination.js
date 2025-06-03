@@ -16,11 +16,9 @@ export default function usePagination(totalItems, pageSize, initialPage = 1) {
     return Math.max(1, Math.ceil(totalItems / pageSize));
   }, [totalItems, pageSize]);
 
-  // offset ve limit, API çağrılarında kullanmak için:
   const offset = useMemo(() => (currentPage - 1) * pageSize, [currentPage, pageSize]);
   const limit = pageSize;
 
-  // sayfa değiştirme (1 ile totalPages arasında sınırla)
   function setPage(page) {
     const p = Math.min(totalPages, Math.max(1, page));
     setCurrentPage(p);

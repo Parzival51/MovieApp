@@ -1,10 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/**
- * 1-10 arası puanlayıcı.
- * readOnly=true → sadece görüntüleme.
- */
 export default function TenStarRating({ value = 0, onChange, readOnly = false }) {
   const circles = Array.from({ length: 10 }, (_, i) => i + 1);
 
