@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C24CA4ED-77EF-48F2-81EF-FA69E3E3D968}|MovieApp.UnitTests\\MovieApp.UnitTests.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.unittests\\controllers\\moviecontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C24CA4ED-77EF-48F2-81EF-FA69E3E3D968}|MovieApp.UnitTests\\MovieApp.UnitTests.csproj|solutionrelative:movieapp.unittests\\controllers\\moviecontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C24CA4ED-77EF-48F2-81EF-FA69E3E3D968}|MovieApp.UnitTests\\MovieApp.UnitTests.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.unittests\\controllers\\ratingcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C24CA4ED-77EF-48F2-81EF-FA69E3E3D968}|MovieApp.UnitTests\\MovieApp.UnitTests.csproj|solutionrelative:movieapp.unittests\\controllers\\ratingcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.business\\concrete\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|solutionrelative:movieapp.business\\concrete\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.business\\concrete\\actorratingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|solutionrelative:movieapp.business\\concrete\\actorratingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.business\\concrete\\actormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|solutionrelative:movieapp.business\\concrete\\actormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.business\\concrete\\activitylogmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|solutionrelative:movieapp.business\\concrete\\activitylogmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CC7C044F-FB33-45E1-9379-1EFE62DAA05D}|MovieApp.API\\MovieApp.API.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{CC7C044F-FB33-45E1-9379-1EFE62DAA05D}|MovieApp.API\\MovieApp.API.csproj|solutionrelative:movieapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -121,10 +145,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.business\\concrete\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|solutionrelative:movieapp.business\\concrete\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.business\\concrete\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|solutionrelative:movieapp.business\\concrete\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC7C044F-FB33-45E1-9379-1EFE62DAA05D}|MovieApp.API\\MovieApp.API.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.api\\controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -567,14 +587,6 @@
       "RelativeMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|solutionrelative:movieapp.business\\concrete\\directormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.business\\concrete\\actormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|solutionrelative:movieapp.business\\concrete\\actormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.business\\concrete\\activitylogmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA928F52-5DBE-4A3D-94DA-B6DAC35055A9}|MovieApp.Business\\MovieApp.Business.csproj|solutionrelative:movieapp.business\\concrete\\activitylogmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CC7C044F-FB33-45E1-9379-1EFE62DAA05D}|MovieApp.API\\MovieApp.API.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.api\\mapping\\watchlistmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC7C044F-FB33-45E1-9379-1EFE62DAA05D}|MovieApp.API\\MovieApp.API.csproj|solutionrelative:movieapp.api\\mapping\\watchlistmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -706,11 +718,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "RatingControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.UnitTests\\Controllers\\RatingControllerTests.cs",
+              "RelativeDocumentMoniker": "MovieApp.UnitTests\\Controllers\\RatingControllerTests.cs",
+              "ToolTip": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.UnitTests\\Controllers\\RatingControllerTests.cs",
+              "RelativeToolTip": "MovieApp.UnitTests\\Controllers\\RatingControllerTests.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T12:33:35.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MovieControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.UnitTests\\Controllers\\MovieControllerTests.cs",
+              "RelativeDocumentMoniker": "MovieApp.UnitTests\\Controllers\\MovieControllerTests.cs",
+              "ToolTip": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.UnitTests\\Controllers\\MovieControllerTests.cs",
+              "RelativeToolTip": "MovieApp.UnitTests\\Controllers\\MovieControllerTests.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAowMMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T12:33:31.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ActorRatingManager.cs",
+              "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\ActorRatingManager.cs",
+              "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\ActorRatingManager.cs",
+              "ToolTip": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\ActorRatingManager.cs",
+              "RelativeToolTip": "MovieApp.Business\\Concrete\\ActorRatingManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T12:33:25.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "AppUrlsOptions.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Utilities\\Results\\AppUrlsOptions.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Utilities\\Results\\AppUrlsOptions.cs",
@@ -718,12 +769,11 @@
               "RelativeToolTip": "MovieApp.Business\\Utilities\\Results\\AppUrlsOptions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T16:02:05.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T16:02:05.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "20250530005704_stars.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\DataAccess\\Migrations\\20250530005704_stars.Designer.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\DataAccess\\Migrations\\20250530005704_stars.Designer.cs",
@@ -735,20 +785,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\appsettings.json",
               "RelativeDocumentMoniker": "MovieApp.API\\appsettings.json",
               "ToolTip": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\appsettings.json",
               "RelativeToolTip": "MovieApp.API\\appsettings.json",
-              "ViewState": "AgIAABgAAAAAAAAAAAAuwCIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-06-03T01:48:03.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "ChangePasswordDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\AuthDtos\\ChangePasswordDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\AuthDtos\\ChangePasswordDto.cs",
@@ -756,12 +806,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\AuthDtos\\ChangePasswordDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T01:32:40.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T01:32:40.914Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "WatchList.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\WatchList.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\WatchList.cs",
@@ -773,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "Review.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\Review.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\Review.cs",
@@ -785,7 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "RefreshToken.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\RefreshToken.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\RefreshToken.cs",
@@ -797,7 +846,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "Rating.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\Rating.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\Rating.cs",
@@ -809,7 +858,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 44,
               "Title": "MovieLanguage.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\MovieLanguage.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\MovieLanguage.cs",
@@ -821,7 +870,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 45,
               "Title": "MovieImage.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\MovieImage.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\MovieImage.cs",
@@ -833,7 +882,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 46,
               "Title": "MovieGenre.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\MovieGenre.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\MovieGenre.cs",
@@ -845,7 +894,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 47,
               "Title": "MovieDirector.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\MovieDirector.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\MovieDirector.cs",
@@ -857,7 +906,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 48,
               "Title": "MovieActor.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\MovieActor.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\MovieActor.cs",
@@ -869,7 +918,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 49,
               "Title": "Movie.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\Movie.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\Movie.cs",
@@ -881,7 +930,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 50,
               "Title": "Language.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\Language.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\Language.cs",
@@ -893,7 +942,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 51,
               "Title": "IUserOwnedEntity.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\IUserOwnedEntity.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\IUserOwnedEntity.cs",
@@ -905,7 +954,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 53,
               "Title": "Favorite.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\Favorite.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\Favorite.cs",
@@ -917,7 +966,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 52,
               "Title": "Genre.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\Genre.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\Genre.cs",
@@ -929,7 +978,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 54,
               "Title": "DirectorRating.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\DirectorRating.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\DirectorRating.cs",
@@ -941,7 +990,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 55,
               "Title": "Director.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\Director.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\Director.cs",
@@ -953,7 +1002,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 57,
               "Title": "ActorRating.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\ActorRating.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\ActorRating.cs",
@@ -965,7 +1014,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 56,
               "Title": "Comment.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\Comment.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\Comment.cs",
@@ -977,7 +1026,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 59,
               "Title": "ActivityLog.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\ActivityLog.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\ActivityLog.cs",
@@ -989,7 +1038,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 60,
               "Title": "WatchlistListDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\WatchListDtos\\WatchlistListDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\WatchListDtos\\WatchlistListDto.cs",
@@ -1001,7 +1050,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 61,
               "Title": "WatchlistDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\WatchListDtos\\WatchlistDetailDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\WatchListDtos\\WatchlistDetailDto.cs",
@@ -1013,7 +1062,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 62,
               "Title": "CreateWatchlistDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\WatchListDtos\\CreateWatchlistDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\WatchListDtos\\CreateWatchlistDto.cs",
@@ -1025,7 +1074,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "UserProfileDTO.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\UserDtos\\UserProfileDTO.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\UserDtos\\UserProfileDTO.cs",
@@ -1033,12 +1082,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\UserDtos\\UserProfileDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T01:11:19.825Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T01:11:19.825Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "UserListDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\UserDtos\\UserListDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\UserDtos\\UserListDto.cs",
@@ -1046,12 +1094,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\UserDtos\\UserListDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T01:11:16.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T01:11:16.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "UserDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\UserDtos\\UserDetailDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\UserDtos\\UserDetailDto.cs",
@@ -1059,12 +1106,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\UserDtos\\UserDetailDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T01:11:13.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T01:11:13.717Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "UpdateUser.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\UserDtos\\UpdateUser.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\UserDtos\\UpdateUser.cs",
@@ -1072,12 +1118,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\UserDtos\\UpdateUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T01:11:11.263Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T01:11:11.263Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "CreateUserDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\UserDtos\\CreateUserDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\UserDtos\\CreateUserDto.cs",
@@ -1085,12 +1130,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\UserDtos\\CreateUserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T01:11:08.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T01:11:08.851Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "UpdateRoleDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\RoleDtos\\UpdateRoleDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\RoleDtos\\UpdateRoleDto.cs",
@@ -1098,12 +1142,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\RoleDtos\\UpdateRoleDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T01:11:05.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T01:11:05.552Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "RoleListDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\RoleDtos\\RoleListDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\RoleDtos\\RoleListDto.cs",
@@ -1111,12 +1154,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\RoleDtos\\RoleListDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T01:11:03.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T01:11:03.187Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "RoleDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\RoleDtos\\RoleDetailDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\RoleDtos\\RoleDetailDto.cs",
@@ -1124,12 +1166,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\RoleDtos\\RoleDetailDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T01:11:00.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T01:11:00.834Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "CreateRoleDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\RoleDtos\\CreateRoleDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\RoleDtos\\CreateRoleDto.cs",
@@ -1137,12 +1178,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\RoleDtos\\CreateRoleDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T01:10:57.337Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T01:10:57.337Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 63,
               "Title": "UpdateReviewDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ReviewDtos\\UpdateReviewDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ReviewDtos\\UpdateReviewDto.cs",
@@ -1154,7 +1194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 64,
               "Title": "ReviewListDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ReviewDtos\\ReviewListDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ReviewDtos\\ReviewListDto.cs",
@@ -1166,7 +1206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 65,
               "Title": "ReviewDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ReviewDtos\\ReviewDetailDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ReviewDtos\\ReviewDetailDto.cs",
@@ -1178,7 +1218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 66,
               "Title": "CreateReviewDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ReviewDtos\\CreateReviewDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ReviewDtos\\CreateReviewDto.cs",
@@ -1190,7 +1230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 67,
               "Title": "RefreshTokenListDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\RefreshTokenDtos\\RefreshTokenListDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\RefreshTokenDtos\\RefreshTokenListDto.cs",
@@ -1202,7 +1242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 68,
               "Title": "RefreshTokenDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\RefreshTokenDtos\\RefreshTokenDetailDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\RefreshTokenDtos\\RefreshTokenDetailDto.cs",
@@ -1214,7 +1254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 69,
               "Title": "UpdateRatingDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\RatingDtos\\UpdateRatingDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\RatingDtos\\UpdateRatingDto.cs",
@@ -1226,7 +1266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 70,
               "Title": "RatingListDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\RatingDtos\\RatingListDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\RatingDtos\\RatingListDto.cs",
@@ -1238,7 +1278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 71,
               "Title": "RatingDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\RatingDtos\\RatingDetailDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\RatingDtos\\RatingDetailDto.cs",
@@ -1250,7 +1290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 72,
               "Title": "CreateRatingDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\RatingDtos\\CreateRatingDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\RatingDtos\\CreateRatingDto.cs",
@@ -1262,7 +1302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 73,
               "Title": "UpdateMovieDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\MovieDtos\\UpdateMovieDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\MovieDtos\\UpdateMovieDto.cs",
@@ -1274,7 +1314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 74,
               "Title": "SearchResultDTO.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\MovieDtos\\SearchResultDTO.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\MovieDtos\\SearchResultDTO.cs",
@@ -1286,7 +1326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 75,
               "Title": "MovieListDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\MovieDtos\\MovieListDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\MovieDtos\\MovieListDto.cs",
@@ -1298,7 +1338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 76,
               "Title": "MovieLanguageDtos.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\MovieDtos\\MovieLanguageDtos.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\MovieDtos\\MovieLanguageDtos.cs",
@@ -1310,7 +1350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 77,
               "Title": "MovieLangDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\MovieDtos\\MovieLangDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\MovieDtos\\MovieLangDto.cs",
@@ -1322,7 +1362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 78,
               "Title": "MovieImageDtos.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\MovieDtos\\MovieImageDtos.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\MovieDtos\\MovieImageDtos.cs",
@@ -1334,7 +1374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 79,
               "Title": "MovieDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\MovieDtos\\MovieDetailDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\MovieDtos\\MovieDetailDto.cs",
@@ -1346,7 +1386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 80,
               "Title": "ImageMetaDtos.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\MovieDtos\\ImageMetaDtos.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\MovieDtos\\ImageMetaDtos.cs",
@@ -1358,7 +1398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 81,
               "Title": "CreateMovieDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\MovieDtos\\CreateMovieDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\MovieDtos\\CreateMovieDto.cs",
@@ -1370,7 +1410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 82,
               "Title": "ActorCastDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\MovieDtos\\ActorCastDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\MovieDtos\\ActorCastDto.cs",
@@ -1382,7 +1422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 83,
               "Title": "UpdateGenreDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\GenreDtos\\UpdateGenreDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\GenreDtos\\UpdateGenreDto.cs",
@@ -1394,7 +1434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 84,
               "Title": "GenreListDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\GenreDtos\\GenreListDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\GenreDtos\\GenreListDto.cs",
@@ -1406,7 +1446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 85,
               "Title": "GenreDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\GenreDtos\\GenreDetailDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\GenreDtos\\GenreDetailDto.cs",
@@ -1418,7 +1458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 86,
               "Title": "CreateGenreDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\GenreDtos\\CreateGenreDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\GenreDtos\\CreateGenreDto.cs",
@@ -1430,7 +1470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 87,
               "Title": "FavoriteListDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\FavoriteDtos\\FavoriteListDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\FavoriteDtos\\FavoriteListDto.cs",
@@ -1442,7 +1482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 88,
               "Title": "FavoriteDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\FavoriteDtos\\FavoriteDetailDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\FavoriteDtos\\FavoriteDetailDto.cs",
@@ -1454,7 +1494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 89,
               "Title": "CreateFavoriteDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\FavoriteDtos\\CreateFavoriteDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\FavoriteDtos\\CreateFavoriteDto.cs",
@@ -1466,7 +1506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 90,
               "Title": "TmdbPersonDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ExternalDtos\\TmdbPersonDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ExternalDtos\\TmdbPersonDto.cs",
@@ -1478,7 +1518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 91,
               "Title": "TmdbLanguageDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ExternalDtos\\TmdbLanguageDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ExternalDtos\\TmdbLanguageDto.cs",
@@ -1490,7 +1530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 92,
               "Title": "TmdbFullMovieDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ExternalDtos\\TmdbFullMovieDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ExternalDtos\\TmdbFullMovieDto.cs",
@@ -1502,7 +1542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 93,
               "Title": "MovieLangDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ExternalDtos\\MovieLangDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ExternalDtos\\MovieLangDto.cs",
@@ -1514,7 +1554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 94,
               "Title": "UpdateDirectorDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\DirectorDtos\\UpdateDirectorDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\DirectorDtos\\UpdateDirectorDto.cs",
@@ -1526,7 +1566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 95,
               "Title": "ScoreDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\DirectorDtos\\ScoreDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\DirectorDtos\\ScoreDto.cs",
@@ -1538,7 +1578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 96,
               "Title": "DirectorListDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\DirectorDtos\\DirectorListDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\DirectorDtos\\DirectorListDto.cs",
@@ -1550,7 +1590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 97,
               "Title": "DirectorDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\DirectorDtos\\DirectorDetailDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\DirectorDtos\\DirectorDetailDto.cs",
@@ -1562,7 +1602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 98,
               "Title": "CreateDirectorDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\DirectorDtos\\CreateDirectorDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\DirectorDtos\\CreateDirectorDto.cs",
@@ -1574,7 +1614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 99,
               "Title": "UpdateCommentDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\CommentDtos\\UpdateCommentDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\CommentDtos\\UpdateCommentDto.cs",
@@ -1586,7 +1626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 100,
               "Title": "CreateCommentDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\CommentDtos\\CreateCommentDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\CommentDtos\\CreateCommentDto.cs",
@@ -1598,7 +1638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 101,
               "Title": "CommentListDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\CommentDtos\\CommentListDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\CommentDtos\\CommentListDto.cs",
@@ -1610,7 +1650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 102,
               "Title": "CommentDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\CommentDtos\\CommentDetailDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\CommentDtos\\CommentDetailDto.cs",
@@ -1622,7 +1662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 103,
               "Title": "UpdateActorDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ActorDtos\\UpdateActorDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ActorDtos\\UpdateActorDto.cs",
@@ -1634,7 +1674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 104,
               "Title": "ScoreDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ActorDtos\\ScoreDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ActorDtos\\ScoreDto.cs",
@@ -1646,7 +1686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 105,
               "Title": "CreateActorDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ActorDtos\\CreateActorDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ActorDtos\\CreateActorDto.cs",
@@ -1658,7 +1698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 107,
               "Title": "ActorKnownForDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ActorDtos\\ActorKnownForDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ActorDtos\\ActorKnownForDto.cs",
@@ -1670,7 +1710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 106,
               "Title": "ActorListDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ActorDtos\\ActorListDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ActorDtos\\ActorListDto.cs",
@@ -1682,7 +1722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 108,
               "Title": "ActorDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ActorDtos\\ActorDetailDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ActorDtos\\ActorDetailDto.cs",
@@ -1694,7 +1734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 109,
               "Title": "ActivityLogListDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\ActivityLogDtos\\ActivityLogListDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\ActivityLogDtos\\ActivityLogListDto.cs",
@@ -1706,7 +1746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Repositories\\GenericRepository.cs",
@@ -1714,12 +1754,11 @@
               "RelativeToolTip": "MovieApp.DataAccess\\Repositories\\GenericRepository.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAcwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T01:07:11.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T01:07:11.445Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 110,
               "Title": "MovieAppDbContextFactory.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Context\\MovieAppDbContextFactory.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Context\\MovieAppDbContextFactory.cs",
@@ -1731,7 +1770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 111,
               "Title": "MovieAppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Context\\MovieAppDbContext.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Context\\MovieAppDbContext.cs",
@@ -1743,7 +1782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 112,
               "Title": "ReviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Concrete\\ReviewRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Concrete\\ReviewRepository.cs",
@@ -1755,7 +1794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 113,
               "Title": "RefreshTokenRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Concrete\\RefreshTokenRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Concrete\\RefreshTokenRepository.cs",
@@ -1767,7 +1806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 114,
               "Title": "RatingRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Concrete\\RatingRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Concrete\\RatingRepository.cs",
@@ -1779,7 +1818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 116,
               "Title": "MovieImageRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Concrete\\MovieImageRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Concrete\\MovieImageRepository.cs",
@@ -1791,7 +1830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 115,
               "Title": "MovieRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Concrete\\MovieRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Concrete\\MovieRepository.cs",
@@ -1803,7 +1842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 117,
               "Title": "LanguageRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Concrete\\LanguageRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Concrete\\LanguageRepository.cs",
@@ -1815,7 +1854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 118,
               "Title": "GenreRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Concrete\\GenreRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Concrete\\GenreRepository.cs",
@@ -1827,7 +1866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 119,
               "Title": "DirectorRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Concrete\\DirectorRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Concrete\\DirectorRepository.cs",
@@ -1839,7 +1878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 120,
               "Title": "DirectorRatingRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Concrete\\DirectorRatingRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Concrete\\DirectorRatingRepository.cs",
@@ -1851,7 +1890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 121,
               "Title": "CommentRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Concrete\\CommentRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Concrete\\CommentRepository.cs",
@@ -1863,7 +1902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 122,
               "Title": "ActorRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Concrete\\ActorRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Concrete\\ActorRepository.cs",
@@ -1875,7 +1914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 123,
               "Title": "ActorRatingRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Concrete\\ActorRatingRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Concrete\\ActorRatingRepository.cs",
@@ -1887,7 +1926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 124,
               "Title": "ActivityLogRepository.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Concrete\\ActivityLogRepository.cs",
               "RelativeDocumentMoniker": "MovieApp.DataAccess\\Concrete\\ActivityLogRepository.cs",
@@ -1899,7 +1938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 125,
               "Title": "SuccessDataResult.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Utilities\\Results\\SuccessDataResult.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Utilities\\Results\\SuccessDataResult.cs",
@@ -1911,7 +1950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 126,
               "Title": "IResult.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Utilities\\Results\\IResult.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Utilities\\Results\\IResult.cs",
@@ -1923,7 +1962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 127,
               "Title": "IDataResult.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Utilities\\Results\\IDataResult.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Utilities\\Results\\IDataResult.cs",
@@ -1935,7 +1974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 128,
               "Title": "ErrorDataResult.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Utilities\\Results\\ErrorDataResult.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Utilities\\Results\\ErrorDataResult.cs",
@@ -1947,7 +1986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 130,
               "Title": "WatchlistManager .cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\WatchlistManager .cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\WatchlistManager .cs",
@@ -1959,7 +1998,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 131,
               "Title": "UserManager.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\UserManager.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\UserManager.cs",
@@ -1971,7 +2010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
+              "DocumentIndex": 132,
               "Title": "ReviewManager.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\ReviewManager.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\ReviewManager.cs",
@@ -1983,7 +2022,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 133,
               "Title": "RefreshTokenManager.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\RefreshTokenManager.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\RefreshTokenManager.cs",
@@ -1995,7 +2034,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 134,
               "Title": "RatingManager.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\RatingManager.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\RatingManager.cs",
@@ -2007,7 +2046,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 130,
+              "DocumentIndex": 135,
               "Title": "MovieManager .cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\MovieManager .cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\MovieManager .cs",
@@ -2019,7 +2058,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 131,
+              "DocumentIndex": 136,
               "Title": "MovieImageManager .cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\MovieImageManager .cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\MovieImageManager .cs",
@@ -2031,7 +2070,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 132,
+              "DocumentIndex": 137,
               "Title": "LanguageManager.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\LanguageManager.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\LanguageManager.cs",
@@ -2043,7 +2082,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 133,
+              "DocumentIndex": 138,
               "Title": "JwtService.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\JwtService.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\JwtService.cs",
@@ -2055,7 +2094,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 134,
+              "DocumentIndex": 139,
               "Title": "GenreManager.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\GenreManager.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\GenreManager.cs",
@@ -2067,7 +2106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 135,
+              "DocumentIndex": 140,
               "Title": "GenericManager.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\GenericManager.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\GenericManager.cs",
@@ -2079,7 +2118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 136,
+              "DocumentIndex": 141,
               "Title": "FavoriteManager .cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\FavoriteManager .cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\FavoriteManager .cs",
@@ -2091,7 +2130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 137,
+              "DocumentIndex": 142,
               "Title": "ExternalPersonalService.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\ExternalPersonalService.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\ExternalPersonalService.cs",
@@ -2103,7 +2142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 138,
+              "DocumentIndex": 143,
               "Title": "ExternalMovieService.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\ExternalMovieService.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\ExternalMovieService.cs",
@@ -2115,7 +2154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 139,
+              "DocumentIndex": 144,
               "Title": "DirectorRatingManager.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\DirectorRatingManager.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\DirectorRatingManager.cs",
@@ -2127,7 +2166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 140,
+              "DocumentIndex": 145,
               "Title": "DirectorManager.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\DirectorManager.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\DirectorManager.cs",
@@ -2139,7 +2178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "CommentManager.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\CommentManager.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\CommentManager.cs",
@@ -2147,36 +2186,37 @@
               "RelativeToolTip": "MovieApp.Business\\Concrete\\CommentManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T00:49:20.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T00:49:20.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 141,
+              "DocumentIndex": 4,
               "Title": "ActorManager.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\ActorManager.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\ActorManager.cs",
               "ToolTip": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\ActorManager.cs",
               "RelativeToolTip": "MovieApp.Business\\Concrete\\ActorManager.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAYwC8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAA9wC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T00:49:12.679Z"
+              "WhenOpened": "2025-06-03T00:49:12.679Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 142,
+              "DocumentIndex": 5,
               "Title": "ActivityLogManager.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\ActivityLogManager.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\ActivityLogManager.cs",
               "ToolTip": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\ActivityLogManager.cs",
               "RelativeToolTip": "MovieApp.Business\\Concrete\\ActivityLogManager.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwC0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T00:49:09.095Z"
+              "WhenOpened": "2025-06-03T00:49:09.095Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 143,
+              "DocumentIndex": 146,
               "Title": "WatchListMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\WatchListMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\WatchListMapping.cs",
@@ -2188,7 +2228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "UserMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\UserMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\UserMapping.cs",
@@ -2196,12 +2236,11 @@
               "RelativeToolTip": "MovieApp.API\\Mapping\\UserMapping.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T00:34:44.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T00:34:44.51Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 144,
+              "DocumentIndex": 147,
               "Title": "TmdbMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\TmdbMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\TmdbMapping.cs",
@@ -2213,7 +2252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 145,
+              "DocumentIndex": 148,
               "Title": "RoleMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\RoleMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\RoleMapping.cs",
@@ -2225,7 +2264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 146,
+              "DocumentIndex": 149,
               "Title": "ReviewMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\ReviewMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\ReviewMapping.cs",
@@ -2237,7 +2276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 147,
+              "DocumentIndex": 150,
               "Title": "RefreshTokenMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\RefreshTokenMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\RefreshTokenMapping.cs",
@@ -2249,7 +2288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 148,
+              "DocumentIndex": 151,
               "Title": "RatingMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\RatingMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\RatingMapping.cs",
@@ -2261,7 +2300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 149,
+              "DocumentIndex": 152,
               "Title": "MovieMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\MovieMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\MovieMapping.cs",
@@ -2273,7 +2312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 150,
+              "DocumentIndex": 153,
               "Title": "MovieImageMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\MovieImageMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\MovieImageMapping.cs",
@@ -2285,7 +2324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 151,
+              "DocumentIndex": 154,
               "Title": "LanguageMappingcs.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\LanguageMappingcs.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\LanguageMappingcs.cs",
@@ -2297,7 +2336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 152,
+              "DocumentIndex": 155,
               "Title": "ImageMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\ImageMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\ImageMapping.cs",
@@ -2309,7 +2348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 153,
+              "DocumentIndex": 156,
               "Title": "GenreMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\GenreMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\GenreMapping.cs",
@@ -2321,7 +2360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 154,
+              "DocumentIndex": 157,
               "Title": "FavoriteMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\FavoriteMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\FavoriteMapping.cs",
@@ -2333,7 +2372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 155,
+              "DocumentIndex": 158,
               "Title": "DirectorMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\DirectorMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\DirectorMapping.cs",
@@ -2345,7 +2384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 156,
+              "DocumentIndex": 159,
               "Title": "CommentMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\CommentMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\CommentMapping.cs",
@@ -2357,7 +2396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 157,
+              "DocumentIndex": 160,
               "Title": "ActorModelMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\ActorModelMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\ActorModelMapping.cs",
@@ -2369,7 +2408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 158,
+              "DocumentIndex": 161,
               "Title": "ActorMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\ActorMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\ActorMapping.cs",
@@ -2381,7 +2420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 159,
+              "DocumentIndex": 162,
               "Title": "ActivityLogMapping.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Mapping\\ActivityLogMapping.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Mapping\\ActivityLogMapping.cs",
@@ -2393,7 +2432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 160,
+              "DocumentIndex": 163,
               "Title": "WatchlistsController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\WatchlistsController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\WatchlistsController.cs",
@@ -2405,7 +2444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 161,
+              "DocumentIndex": 164,
               "Title": "RolesController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\RolesController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\RolesController.cs",
@@ -2417,7 +2456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 162,
+              "DocumentIndex": 165,
               "Title": "ReviewsController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\ReviewsController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\ReviewsController.cs",
@@ -2429,7 +2468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 163,
+              "DocumentIndex": 166,
               "Title": "RatingsController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\RatingsController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\RatingsController.cs",
@@ -2441,7 +2480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 164,
+              "DocumentIndex": 167,
               "Title": "ProfileController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\ProfileController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\ProfileController.cs",
@@ -2453,7 +2492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 165,
+              "DocumentIndex": 168,
               "Title": "MoviesController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\MoviesController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\MoviesController.cs",
@@ -2465,7 +2504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 166,
+              "DocumentIndex": 169,
               "Title": "GenresController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\GenresController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\GenresController.cs",
@@ -2477,7 +2516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 167,
+              "DocumentIndex": 170,
               "Title": "FavoritesController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\FavoritesController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\FavoritesController.cs",
@@ -2489,7 +2528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 168,
+              "DocumentIndex": 171,
               "Title": "ExternalSyncController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\ExternalSyncController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\ExternalSyncController.cs",
@@ -2501,7 +2540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 169,
+              "DocumentIndex": 172,
               "Title": "DirectorsController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\DirectorsController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\DirectorsController.cs",
@@ -2513,7 +2552,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 171,
+              "DocumentIndex": 174,
               "Title": "ActivityLogController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\ActivityLogController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\ActivityLogController.cs",
@@ -2525,7 +2564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\UsersController.cs",
@@ -2533,12 +2572,11 @@
               "RelativeToolTip": "MovieApp.API\\Controllers\\UsersController.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T22:13:32.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T22:13:32.489Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "ForgotConfirmationDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\AuthDtos\\ForgotConfirmationDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\AuthDtos\\ForgotConfirmationDto.cs",
@@ -2546,12 +2584,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\AuthDtos\\ForgotConfirmationDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T22:12:35.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T22:12:35.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "ServiceExtensions.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Extensions\\ServiceExtensions.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Extensions\\ServiceExtensions.cs",
@@ -2559,12 +2596,11 @@
               "RelativeToolTip": "MovieApp.API\\Extensions\\ServiceExtensions.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAuwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T17:10:08.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T17:10:08.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Program.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Program.cs",
@@ -2572,12 +2608,11 @@
               "RelativeToolTip": "MovieApp.API\\Program.cs",
               "ViewState": "AgIAAIQAAAAAAAAAAAAuwJoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T17:07:45.288Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T17:07:45.288Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "ResetPasswordDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\AuthDtos\\ResetPasswordDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\AuthDtos\\ResetPasswordDto.cs",
@@ -2585,12 +2620,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\AuthDtos\\ResetPasswordDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T17:04:34.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T17:04:34.52Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "ForgotPasswordDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\AuthDtos\\ForgotPasswordDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\AuthDtos\\ForgotPasswordDto.cs",
@@ -2598,12 +2632,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\AuthDtos\\ForgotPasswordDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T17:04:17.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T17:04:17.314Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "ActorsController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\ActorsController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\ActorsController.cs",
@@ -2611,12 +2644,11 @@
               "RelativeToolTip": "MovieApp.API\\Controllers\\ActorsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:50:39.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T16:50:39.519Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 172,
+              "DocumentIndex": 175,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Abstract\\IAuthService.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Abstract\\IAuthService.cs",
@@ -2628,7 +2660,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 170,
+              "DocumentIndex": 173,
               "Title": "CommentsController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\CommentsController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\CommentsController.cs",
@@ -2640,7 +2672,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "UserRole.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\UserRole.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\UserRole.cs",
@@ -2648,12 +2680,11 @@
               "RelativeToolTip": "MovieApp.Entity\\Entities\\UserRole.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:41:33.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T16:41:33.464Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\Role.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\Role.cs",
@@ -2661,12 +2692,11 @@
               "RelativeToolTip": "MovieApp.Entity\\Entities\\Role.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:41:29.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T16:41:29.9Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\User.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\User.cs",
@@ -2674,12 +2704,11 @@
               "RelativeToolTip": "MovieApp.Entity\\Entities\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:41:27.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T16:41:27.388Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 58,
               "Title": "Actor.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Entity\\Entities\\Actor.cs",
               "RelativeDocumentMoniker": "MovieApp.Entity\\Entities\\Actor.cs",
@@ -2691,7 +2720,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "UpdateUserRolesDto.cs.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\AuthDtos\\UpdateUserRolesDto.cs.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\AuthDtos\\UpdateUserRolesDto.cs.cs",
@@ -2699,12 +2728,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\AuthDtos\\UpdateUserRolesDto.cs.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:41:04.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T16:41:04.312Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "TokenResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\AuthDtos\\TokenResponseDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\AuthDtos\\TokenResponseDto.cs",
@@ -2712,12 +2740,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\AuthDtos\\TokenResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:41:01.992Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T16:41:01.992Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\AuthDtos\\RegisterDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\AuthDtos\\RegisterDto.cs",
@@ -2725,12 +2752,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\AuthDtos\\RegisterDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:40:59.443Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T16:40:59.443Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "RefreshTokenRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\AuthDtos\\RefreshTokenRequestDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\AuthDtos\\RefreshTokenRequestDto.cs",
@@ -2738,12 +2764,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\AuthDtos\\RefreshTokenRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:40:57.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T16:40:57.367Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\AuthDtos\\LoginDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\AuthDtos\\LoginDto.cs",
@@ -2751,12 +2776,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\AuthDtos\\LoginDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:40:55.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T16:40:55.277Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "AssignRolesDto.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DTO\\DTOs\\AuthDtos\\AssignRolesDto.cs",
               "RelativeDocumentMoniker": "MovieApp.DTO\\DTOs\\AuthDtos\\AssignRolesDto.cs",
@@ -2764,12 +2788,11 @@
               "RelativeToolTip": "MovieApp.DTO\\DTOs\\AuthDtos\\AssignRolesDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:40:52.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T16:40:52.776Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\AuthController.cs",
@@ -2777,12 +2800,11 @@
               "RelativeToolTip": "MovieApp.API\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAPkAAAAAAAAAAAAuwA8BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:40:22.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T16:40:22.425Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 2,
               "Title": "AuthManager.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\AuthManager.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\AuthManager.cs",
@@ -2795,7 +2817,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 173,
+              "DocumentIndex": 176,
               "Title": "IEmailSender.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Abstract\\IEmailSender.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Abstract\\IEmailSender.cs",
@@ -2807,7 +2829,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 129,
               "Title": "SmtpSettings.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Models\\SmtpSettings.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Models\\SmtpSettings.cs",
@@ -2819,7 +2841,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 35,
               "Title": "EmailSender.cs",
               "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.Business\\Concrete\\EmailSender.cs",
               "RelativeDocumentMoniker": "MovieApp.Business\\Concrete\\EmailSender.cs",
@@ -2827,8 +2849,7 @@
               "RelativeToolTip": "MovieApp.Business\\Concrete\\EmailSender.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T16:33:02.66Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T16:33:02.66Z"
             }
           ]
         }
