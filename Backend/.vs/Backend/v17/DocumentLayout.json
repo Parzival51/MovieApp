@@ -1,71 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{BA27154D-4ADA-4F39-BA6F-7A7B031BDAD9}|MovieApp.DataAccess\\MovieApp.DataAccess.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.dataaccess\\migrations\\20250525012932_secondcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA27154D-4ADA-4F39-BA6F-7A7B031BDAD9}|MovieApp.DataAccess\\MovieApp.DataAccess.csproj|solutionrelative:movieapp.dataaccess\\migrations\\20250525012932_secondcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA27154D-4ADA-4F39-BA6F-7A7B031BDAD9}|MovieApp.DataAccess\\MovieApp.DataAccess.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.dataaccess\\migrations\\20250524134855_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA27154D-4ADA-4F39-BA6F-7A7B031BDAD9}|MovieApp.DataAccess\\MovieApp.DataAccess.csproj|solutionrelative:movieapp.dataaccess\\migrations\\20250524134855_initialcreate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC7C044F-FB33-45E1-9379-1EFE62DAA05D}|MovieApp.API\\MovieApp.API.csproj|c:\\users\\yusuf emre g\u00F6zc\u00FC\\desktop\\movieapp\\backend\\movieapp.api\\controllers\\activitylogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC7C044F-FB33-45E1-9379-1EFE62DAA05D}|MovieApp.API\\MovieApp.API.csproj|solutionrelative:movieapp.api\\controllers\\activitylogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 100,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250525012932_SecondCreate.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Migrations\\20250525012932_SecondCreate.Designer.cs",
-              "RelativeDocumentMoniker": "MovieApp.DataAccess\\Migrations\\20250525012932_SecondCreate.Designer.cs",
-              "ToolTip": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Migrations\\20250525012932_SecondCreate.Designer.cs",
-              "RelativeToolTip": "MovieApp.DataAccess\\Migrations\\20250525012932_SecondCreate.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T09:22:20.252Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20250524134855_InitialCreate.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Migrations\\20250524134855_InitialCreate.Designer.cs",
-              "RelativeDocumentMoniker": "MovieApp.DataAccess\\Migrations\\20250524134855_InitialCreate.Designer.cs",
-              "ToolTip": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.DataAccess\\Migrations\\20250524134855_InitialCreate.Designer.cs",
-              "RelativeToolTip": "MovieApp.DataAccess\\Migrations\\20250524134855_InitialCreate.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T09:22:18.255Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ActivityLogController.cs",
-              "DocumentMoniker": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\ActivityLogController.cs",
-              "RelativeDocumentMoniker": "MovieApp.API\\Controllers\\ActivityLogController.cs",
-              "ToolTip": "C:\\Users\\Yusuf emre g\u00F6zc\u00FC\\Desktop\\MovieApp\\Backend\\MovieApp.API\\Controllers\\ActivityLogController.cs",
-              "RelativeToolTip": "MovieApp.API\\Controllers\\ActivityLogController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T09:22:14.742Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

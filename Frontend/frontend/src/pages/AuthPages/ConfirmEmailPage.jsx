@@ -1,15 +1,15 @@
 // src/pages/AuthPages/ConfirmEmailPage.jsx
 import React, { useEffect, useState } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import Layout from '../../components/Layout';
-import Spinner from '../../components/Spinner';
+import Layout   from '../../components/Layout';
+import Spinner  from '../../components/Spinner';
 
 export default function ConfirmEmailPage() {
   const [searchParams] = useSearchParams();
   const userId = searchParams.get('userId');
   const token  = searchParams.get('token');
 
-  const [status, setStatus] = useState('loading');
+  const [status,  setStatus]  = useState('loading');   // loading | success | error
   const [message, setMessage] = useState('');
 
   useEffect(() => {
@@ -19,21 +19,30 @@ export default function ConfirmEmailPage() {
       return;
     }
 
-    // “token” zaten backend tarafından bir kez UrlEncode edilmiş olarak geliyor.
-    // Burada tekrar encodeURIComponent(token) kullanmayacağız.
+    /* token backend’de zaten URL-encode edilmiş durumda – yeniden encode etmiyoruz */
     fetch(
       `https://localhost:7176/api/auth/confirm-email?userId=${userId}&token=${token}`,
       { method: 'GET' }
     )
       .then(async (res) => {
         if (res.ok) {
-          const text = await res.text();
+          /* ► JSON dönüyorsa accessToken’ı sakla ama ekrana basma */
+          let txt = 'E-posta adresiniz başarıyla doğrulandı. Giriş yapabilirsiniz.';
+          try {
+            const data = await res.clone().json();
+            if (data.accessToken) {
+              localStorage.setItem('accessToken', data.accessToken);
+            }
+            if (data.message) txt = data.message;
+          } catch {
+            txt = await res.text() || txt;
+          }
           setStatus('success');
-          setMessage(text || 'E-posta adresiniz başarıyla doğrulandı. Giriş yapabilirsiniz.');
+          setMessage(txt);
         } else {
-          const err = await res.text();
+          const errText = (await res.text()) || 'E-posta onayı sırasında bir hata oluştu.';
           setStatus('error');
-          setMessage(err || 'E-posta onayı sırasında bir hata oluştu.');
+          setMessage(errText);
         }
       })
       .catch(() => {
@@ -49,9 +58,12 @@ export default function ConfirmEmailPage() {
           {status === 'loading' && (
             <>
               <Spinner />
-              <p className="text-sm text-muted">E-posta onayınız kontrol ediliyor…</p>
+              <p className="text-sm text-muted">
+                E-posta onayınız kontrol ediliyor…
+              </p>
             </>
           )}
+
           {status === 'success' && (
             <>
               <h1 className="text-2xl font-bold text-green-600">Onay Başarılı!</h1>
@@ -61,6 +73,7 @@ export default function ConfirmEmailPage() {
               </Link>
             </>
           )}
+
           {status === 'error' && (
             <>
               <h1 className="text-2xl font-bold text-danger">Onay Başarısız</h1>

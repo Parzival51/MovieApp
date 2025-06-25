@@ -19,7 +19,6 @@ export const updateActor = dto =>
 export const deleteActor = id =>
   client.delete(`/actors/${id}`);
 
-// Filmografi
 export function getMoviesByActor(actorId) {
   return client
     .get(`/actors/${actorId}/movies`)

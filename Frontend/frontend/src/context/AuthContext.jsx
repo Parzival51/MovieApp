@@ -1,3 +1,4 @@
+// src/hooks/AuthProvider.jsx
 import React, { createContext, useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import client from '../api/client';
@@ -8,24 +9,22 @@ export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [tokens, setTokens] = useState(() => {
-    // localStorage’da yalnızca accessToken saklıyoruz
     const stored = localStorage.getItem('tokens');
     return stored ? JSON.parse(stored) : null;
   });
-  const [user, setUser]     = useState(null);
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const ROLE_CLAIM  = 'http://schemas.microsoft.com/ws/2008/06/identity/claims/role';
-  const ID_CLAIM    = 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier';
-  const NAME_CLAIM  = 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name';
-  const EMAIL_CLAIM = 'email';
+  const ROLE  = 'http://schemas.microsoft.com/ws/2008/06/identity/claims/role';
+  const ID    = 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier';
+  const NAME  = 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name';
+  const EMAIL = 'email';
 
-  // Her tokens değiştiğinde localStorage ve user güncellensin:
+  /* tokens → localStorage + user ----------------------------------------- */
   useEffect(() => {
     if (tokens) {
       localStorage.setItem('tokens', JSON.stringify(tokens));
       localStorage.setItem('accessToken', tokens.accessToken);
-      // refreshToken artık HttpOnly cookie’de duruyor, localStorage’a yazmaya gerek yok.
       setUser(refreshUserFromToken(tokens.accessToken));
     } else {
       localStorage.removeItem('tokens');
@@ -34,76 +33,53 @@ export function AuthProvider({ children }) {
     }
   }, [tokens]);
 
-  // Sayfa yüklendiğinde eğer cookie’de refreshToken varsa yeniletme denemesi yap:
+  /* sayfa yenilendiğinde refresh-cookie varsa access token yenile --------- */
   useEffect(() => {
-    async function tryRefresh() {
+    (async () => {
       if (document.cookie.includes('refreshToken=')) {
         try {
-          const { accessToken: newAccess } = await authApi.refreshToken();
-          setTokens(prev => ({ ...prev, accessToken: newAccess }));
-        } catch (err) {
+          const { accessToken } = await authApi.refreshToken();
+          setTokens({ accessToken, refreshToken: null });
+        } catch {
           doLogout();
         }
       }
       setLoading(false);
-    }
-    tryRefresh();
+    })();
   }, []);
 
-  function refreshUserFromToken(accessToken) {
-    const decoded = decodeToken(accessToken);
-    if (!decoded) return null;
-
-    let roles = [];
-    if (decoded[ROLE_CLAIM]) {
-      roles = Array.isArray(decoded[ROLE_CLAIM])
-                ? decoded[ROLE_CLAIM]
-                : [decoded[ROLE_CLAIM]];
-    }
-
+  function refreshUserFromToken(at) {
+    const d = decodeToken(at);
+    if (!d) return null;
+    const roles = d[ROLE] ? (Array.isArray(d[ROLE]) ? d[ROLE] : [d[ROLE]]) : [];
     return {
-      id:    decoded[ID_CLAIM]   || null,
-      name:  decoded[NAME_CLAIM] || null,
-      email: decoded[EMAIL_CLAIM]|| null,
+      id:    d[ID]    || null,
+      name:  d[NAME]  || null,
+      email: d[EMAIL] || null,
       roles
     };
   }
 
-  const login = async ({ email, password }) => {
-    const d = await authApi.login({ email, password });
-    // API login endpoint’inden yalnızca accessToken bekliyoruz;
-    // refreshToken, HttpOnly cookie’ye düşmüş olacak.
-    if (d?.accessToken) {
-      setTokens({ accessToken: d.accessToken, refreshToken: null });
-      return d;
-    } else {
+  /* ----------------------- PUBLIC API ----------------------------------- */
+  const login = async creds => {
+    const { accessToken } = await authApi.login(creds);
+    if (!accessToken)
       throw new Error('Login işlemi başarılı, ama accessToken alınamadı.');
-    }
+    setTokens({ accessToken, refreshToken: null });
   };
 
-  const register = async ({ userName, displayName, email, password }) => {
-    const d = await authApi.register({ userName, displayName, email, password });
-    if (d?.accessToken) {
-      setTokens({ accessToken: d.accessToken, refreshToken: null });
-      return d;
-    } else {
-      throw new Error('Kayıt başarılı, ama accessToken alınamadı.');
-    }
+  /** Register - accessToken dönmüyor, yalnızca mesaj bekleniyor */
+  const register = async info => {
+    const data = await authApi.register(info);   // { message: "..." }
+    return data;
   };
 
   const doLogout = useCallback(async () => {
-    try {
-      await client.post('/auth/logout');
-    } catch (e) {
-      console.warn('Logout isteği başarısız olabilir:', e);
-    } finally {
-      setTokens(null);
-    }
+    try { await client.post('/auth/logout'); } catch {}
+    setTokens(null);
   }, []);
 
-  if (loading) {
-    return <div>Yükleniyor…</div>;
-  }
+  if (loading) return <div>Yükleniyor…</div>;
 
   return (
     <AuthContext.Provider value={{
@@ -119,6 +95,4 @@ export function AuthProvider({ children }) {
   );
 }
 
-AuthProvider.propTypes = {
-  children: PropTypes.node.isRequired
-};
+AuthProvider.propTypes = { children: PropTypes.node.isRequired };

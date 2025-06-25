@@ -1,5 +1,9 @@
+// Program.cs   ( MovieApp.API )
+
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -21,32 +25,31 @@ using System.Text.Encodings.Web;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
-var configuration = builder.Configuration;
+var cfg = builder.Configuration;
 
-/* ---------- CORS ---------- */
+
 builder.Services.AddCors(opt =>
 {
-    opt.AddPolicy("AllowLocalDev", p =>
-        p.SetIsOriginAllowed(origin =>
+    opt.AddPolicy("AllowLocalDev", p => p
+        .SetIsOriginAllowed(origin =>
         {
-            var uri = new Uri(origin);
-            return uri.Host == "localhost" && uri.Port == 5173;
+            var u = new Uri(origin);
+            return u.Host == "localhost" && u.Port == 5173;
         })
-         .AllowAnyHeader()
-         .AllowAnyMethod()
-         .AllowCredentials());
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials());
 });
-/* ---------- DbContext ---------- */
-builder.Services.AddDbContext<MovieAppDbContext>(o =>
-    o.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-/* ---------- SMTP & URL Options ---------- */
-builder.Services.Configure<SmtpSettings>(configuration.GetSection("SmtpSettings"));
-builder.Services.Configure<AppUrlsOptions>(configuration.GetSection("AppUrls"));
+
+builder.Services.AddDbContext<MovieAppDbContext>(o =>
+    o.UseSqlServer(cfg.GetConnectionString("DefaultConnection")));
+
+
+builder.Services.Configure<SmtpSettings>(cfg.GetSection("SmtpSettings"));
+builder.Services.Configure<AppUrlsOptions>(cfg.GetSection("AppUrls"));
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 
-/* ---------- Infrastructure & Identity ---------- */
-builder.Services.AddInfrastructure(configuration);
 
 builder.Services.AddIdentity<User, Role>(o =>
 {
@@ -59,14 +62,33 @@ builder.Services.AddIdentity<User, Role>(o =>
 .AddEntityFrameworkStores<MovieAppDbContext>()
 .AddDefaultTokenProviders();
 
-/* ---------- JWT ---------- */
-builder.Services.Configure<JwtTokenOptions>(configuration.GetSection("TokenOptions"));
-var jwt = configuration.GetSection("TokenOptions").Get<JwtTokenOptions>();
 
-builder.Services.AddAuthentication(a =>
+builder.Services.ConfigureApplicationCookie(c =>
 {
-    a.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    a.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    c.Events.OnRedirectToLogin = ctx =>
+    {
+        ctx.Response.StatusCode = StatusCodes.Status401Unauthorized;
+        return Task.CompletedTask;
+    };
+    c.Events.OnRedirectToAccessDenied = ctx =>
+    {
+        ctx.Response.StatusCode = StatusCodes.Status403Forbidden;
+        return Task.CompletedTask;
+    };
+});
+
+builder.Services.AddDataProtection()
+                .PersistKeysToFileSystem(
+                    new DirectoryInfo(Path.Combine(builder.Environment.ContentRootPath, "keys")));
+
+
+builder.Services.Configure<JwtTokenOptions>(cfg.GetSection("TokenOptions"));
+var jwt = cfg.GetSection("TokenOptions").Get<JwtTokenOptions>();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
 .AddJwtBearer(o =>
 {
@@ -80,13 +102,23 @@ builder.Services.AddAuthentication(a =>
         ClockSkew = TimeSpan.Zero,
         ValidIssuer = jwt.Issuer,
         ValidAudience = jwt.Audience,
-        IssuerSigningKey = new SymmetricSecurityKey(
-                                      Encoding.UTF8.GetBytes(jwt.Key)),
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.Key)),
         NameClaimType = ClaimTypes.NameIdentifier
     };
 });
 
-/* ---------- DI ---------- */
+
+builder.Services.AddAuthorization(opt =>
+{
+    opt.DefaultPolicy = new AuthorizationPolicyBuilder()
+        .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+        .RequireAuthenticatedUser()
+        .Build();
+});
+
+
+builder.Services.AddInfrastructure(cfg);
+
 builder.Services.AddSingleton(UrlEncoder.Default);
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddScoped<IAuthService, AuthManager>();
@@ -95,18 +127,16 @@ builder.Services.AddScoped<IUserService, UserManagerService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddMemoryCache();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.AddHttpClient<IExternalMovieService, ExternalMovieService>();
-builder.Services.AddHttpClient<IExternalPersonService, ExternalPersonService>();
 
-/* ---------- MVC ---------- */
+
 builder.Services.AddControllers(c => c.Filters.Add<ValidationFilter>())
-                .AddJsonOptions(j =>
-                    j.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+                .AddJsonOptions(o =>
+                    o.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-/* ---------- Build & Middleware ---------- */
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -117,17 +147,13 @@ else
 app.Map("/error", (HttpContext ctx) =>
 {
     var ex = ctx.Features.Get<IExceptionHandlerFeature>()?.Error;
-    return Results.Problem(new ProblemDetails
-    {
-        Status = (int)HttpStatusCode.InternalServerError,
-        Title = "Sunucu hatasý",
-        Detail = ex?.Message
-    });
+
+    return Results.Problem(
+        title: "Sunucu hatasý",
+        detail: ex?.Message,
+        statusCode: StatusCodes.Status500InternalServerError);
 });
 
-
-
-/* ---------- Rol seed ---------- */
 using (var scope = app.Services.CreateScope())
 {
     var roleMgr = scope.ServiceProvider.GetRequiredService<RoleManager<Role>>();
@@ -136,14 +162,13 @@ using (var scope = app.Services.CreateScope())
             await roleMgr.CreateAsync(new Role { Name = role });
 }
 
-/* ---------- Cookie, Auth, Routing ---------- */
+
 app.UseCookiePolicy(new CookiePolicyOptions
 {
-    MinimumSameSitePolicy = SameSiteMode.Strict,
+    MinimumSameSitePolicy = SameSiteMode.None,  
     HttpOnly = Microsoft.AspNetCore.CookiePolicy.HttpOnlyPolicy.Always,
     Secure = CookieSecurePolicy.Always
 });
-
 
 app.UseCors("AllowLocalDev");
 app.UseHttpsRedirection();

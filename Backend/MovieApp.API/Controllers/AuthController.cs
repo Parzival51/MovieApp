@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MovieApp.Business.Abstract;
 using MovieApp.Business.Utilities.Results;
@@ -13,7 +14,6 @@ using MovieApp.DTO.DTOs.AuthDtos;
 using MovieApp.Entity.Entities;
 using System;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
@@ -29,7 +29,9 @@ namespace MovieApp.API.Controllers
         private readonly UserManager<User> _userManager;
         private readonly UrlEncoder _urlEncoder;
         private readonly IMapper _mapper;
-        private readonly AppUrlsOptions _urls;   
+        private readonly AppUrlsOptions _urls;
+        private readonly ILogger<AuthController> _logger;
+        private readonly IJwtService _jwtService;
 
         public AuthController(
             IAuthService authService,
@@ -37,16 +39,21 @@ namespace MovieApp.API.Controllers
             UrlEncoder urlEncoder,
             IMapper mapper,
             UserManager<User> userManager,
-            IOptions<AppUrlsOptions> urls)      
+            IOptions<AppUrlsOptions> urls,
+            ILogger<AuthController> logger,
+            IJwtService jwtService)
         {
             _authService = authService;
             _emailSender = emailSender;
             _urlEncoder = urlEncoder;
             _mapper = mapper;
             _userManager = userManager;
-            _urls = urls.Value;          
+            _urls = urls.Value;
+            _logger = logger;
+            _jwtService = jwtService;
         }
 
+        /
         [HttpPost("register")]
         [AllowAnonymous]
         public async Task<IActionResult> Register([FromBody] RegisterDto dto)
@@ -55,23 +62,37 @@ namespace MovieApp.API.Controllers
                 return BadRequest(ModelState);
 
             var reg = await _authService.RegisterAsync(dto);
-            if (!reg.Success) return BadRequest(reg.Message);
+            if (!reg.Success)
+                return BadRequest(reg.Message);
 
-            var (ok, err, raw) = await _authService.GenerateEmailConfirmationTokenAsync(dto.Email);
-            if (!ok) return StatusCode(500, $"E-posta token üretilemedi: {err}");
+            try
+            {
+                var (ok, err, raw) = await _authService.GenerateEmailConfirmationTokenAsync(dto.Email);
+                if (!ok) throw new Exception(err);
 
-            var user = await _authService.FindUserByEmailAsync(dto.Email);
-            var enc = WebUtility.UrlEncode(raw);
-            var link = $"{_urls.Frontend}/confirm-email?userId={user.Id}&token={enc}";   // << yönlendirme
+                var user = await _authService.FindUserByEmailAsync(dto.Email);
+                var enc = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(raw));
+                var link = $"{_urls.Frontend}/confirm-email?userId={user.Id}&token={enc}";
 
-            await _emailSender.SendEmailAsync(dto.Email,
-                "MovieApp – E-posta Doğrulama",
-                $@"Merhaba {user.UserName},<br/><br/>
-               Hesabınızı doğrulamak için <a href=""{link}"">tıklayın</a>.");
+                await _emailSender.SendEmailAsync(
+                    dto.Email,
+                    "MovieApp – E-posta Doğrulama",
+                    $@"Merhaba {user.UserName},<br/><br/>
+                       Hesabınızı doğrulamak için <a href=""{link}"">tıklayın</a>.");
 
-            return Ok(new { Message = "Kayıt başarılı. Lütfen e-posta adresinizi doğrulayın." });
+                return Ok(new { message = "Kayıt başarılı. Lütfen e-posta adresinizi doğrulayın." });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Doğrulama e-postası gönderilemedi");
+                return Ok(new
+                {
+                    message = "Kayıt başarılı fakat doğrulama e-postası gönderilemedi. Lütfen sonra tekrar deneyin."
+                });
+            }
         }
 
+        
         [HttpGet("confirm-email")]
         [AllowAnonymous]
         public async Task<IActionResult> ConfirmEmail(Guid userId, string token)
@@ -79,33 +100,58 @@ namespace MovieApp.API.Controllers
             if (userId == Guid.Empty || string.IsNullOrWhiteSpace(token))
                 return BadRequest("Eksik userId veya token.");
 
-            var (succ, err) = await _authService.ConfirmEmailAsync(userId.ToString(),
-                                                                   WebUtility.UrlDecode(token));
-            return succ ? Ok("E-posta adresiniz doğrulandı.") :
-                          BadRequest($"E-posta doğrulama başarısız: {err}");
+            string decoded;
+            try
+            {
+                decoded = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(token));
+            }
+            catch
+            {
+                return BadRequest("Geçersiz token (decode).");
+            }
+
+            var (succ, err) = await _authService.ConfirmEmailAsync(userId.ToString(), decoded);
+            if (!succ)
+                return BadRequest($"E-posta doğrulama başarısız: {err}");
+
+            var user = await _userManager.FindByIdAsync(userId.ToString());
+            var tokenData = await _jwtService.CreateTokenAsync(user);
+
+            var cookieOpts = new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.None,
+                Expires = tokenData.ExpiresAt
+            };
+            Response.Cookies.Append("refreshToken", tokenData.RefreshToken, cookieOpts);
+
+            return Ok(new
+            {
+                accessToken = tokenData.AccessToken,
+                message = "E-posta doğrulandı, giriş yapıldı."
+            });
         }
+
+  
 
         [HttpPost("login")]
         [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
             var loginResult = await _authService.LoginAsync(dto);
-            if (!loginResult.Success)
-                return BadRequest(loginResult.Message);
+            if (!loginResult.Success) return BadRequest(loginResult.Message);
 
-            // Refresh token’ı bir HttpOnly cookie’de saklayacağız
-            var refreshToken = loginResult.Data.RefreshToken;
-            var cookieOptions = new CookieOptions
+            var cookieOpts = new CookieOptions
             {
                 HttpOnly = true,
                 Secure = true,
-                SameSite = SameSiteMode.Strict,
+                SameSite = SameSiteMode.None,
                 Expires = DateTime.UtcNow.AddDays(7)
             };
-            Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
+            Response.Cookies.Append("refreshToken", loginResult.Data.RefreshToken, cookieOpts);
 
             return Ok(new { accessToken = loginResult.Data.AccessToken });
         }
@@ -129,143 +175,120 @@ namespace MovieApp.API.Controllers
             if (string.IsNullOrEmpty(token))
                 return BadRequest("Refresh token bulunamadı.");
 
-            var result = await _authService.RefreshTokenAsync(token);
-            if (!result.Success)
-                return BadRequest(result.Message);
+            var res = await _authService.RefreshTokenAsync(token);
+            if (!res.Success) return BadRequest(res.Message);
 
-            var cookieOptions = new CookieOptions
+            var cookieOpts = new CookieOptions
             {
                 HttpOnly = true,
                 Secure = true,
-                SameSite = SameSiteMode.Strict,
+                SameSite = SameSiteMode.None,
                 Expires = DateTime.UtcNow.AddDays(7)
             };
-            Response.Cookies.Append("refreshToken", result.Data.RefreshToken, cookieOptions);
+            Response.Cookies.Append("refreshToken", res.Data.RefreshToken, cookieOpts);
 
-            return Ok(new { accessToken = result.Data.AccessToken });
+            return Ok(new { accessToken = res.Data.AccessToken });
         }
 
-        [HttpPost("forgot-password")]
-        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto model)
-        {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
-
-            var user = await _userManager.FindByEmailAsync(model.Email);
-            if (user == null) return Ok("Şifre sıfırlama linki e-posta adresinize gönderildi.");
-
-            if (!await _userManager.IsEmailConfirmedAsync(user))
-                return BadRequest("Lütfen önce e-posta adresinizi doğrulayın.");
-
-            var raw = await _userManager.GeneratePasswordResetTokenAsync(user);
-            var enc = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(raw));
-            var link = $"{_urls.Frontend}/reset-password?userId={user.Id}&token={enc}"; // << yönlendirme
-
-            await _emailSender.SendEmailAsync(user.Email,
-                "MovieApp Şifre Sıfırlama",
-                $@"Şifrenizi sıfırlamak için <a href=""{link}"">tıklayın</a>.");
-
-            return Ok("Şifre sıfırlama linki e-posta adresinize gönderildi.");
-        }
-
-        [HttpPost("reset-password")]
-        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto model)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var user = await _userManager.FindByIdAsync(model.UserId.ToString());
-            if (user == null)
-                return BadRequest("Geçersiz kullanıcı.");
-
-            byte[] decodedBytes;
-            try
-            {
-                decodedBytes = WebEncoders.Base64UrlDecode(model.Token);
-            }
-            catch
-            {
-                return BadRequest("Geçersiz veya bozuk token.");
-            }
-
-            var decodedToken = Encoding.UTF8.GetString(decodedBytes);
-            var result = await _userManager.ResetPasswordAsync(user, decodedToken, model.NewPassword);
-            if (!result.Succeeded)
-            {
-                var firstError = result.Errors.FirstOrDefault()?.Description
-                                 ?? "Şifre sıfırlama sırasında hata oluştu.";
-                return BadRequest(firstError);
-            }
-
-            return Ok("Şifreniz başarıyla sıfırlandı.");
-        }
+        
 
         [HttpPost("resend-confirmation")]
         [AllowAnonymous]
         public async Task<IActionResult> ResendConfirmation([FromBody] ForgotConfirmationDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var userObj = await _authService.FindUserByEmailAsync(dto.Email);
-            if (userObj == null)
-                return Ok("Eğer kayıtlı bir hesabınız varsa, onay maili gönderildi.");
+            var user = await _authService.FindUserByEmailAsync(dto.Email);
+            if (user == null) return Ok("Eğer kayıtlı bir hesabınız varsa, onay maili gönderildi.");
 
-            if (await _userManager.IsEmailConfirmedAsync(userObj))
+            if (await _userManager.IsEmailConfirmedAsync(user))
                 return Ok("E-posta zaten onaylı.");
 
-            var (tokenSuccess, tokenError, rawEmailToken) =
-                await _authService.GenerateEmailConfirmationTokenAsync(dto.Email);
-            if (!tokenSuccess)
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Token üretilemedi: {tokenError}");
+            var (ok, err, raw) = await _authService.GenerateEmailConfirmationTokenAsync(dto.Email);
+            if (!ok) return StatusCode(500, $"Token üretilemedi: {err}");
 
-            var encodedToken = WebUtility.UrlEncode(rawEmailToken);
-            var confirmLink = Url.Action(
-                nameof(ConfirmEmail),
-                "Auth",
-                new { userId = userObj.Id, token = encodedToken },
-                Request.Scheme);
+            var enc = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(raw));
+            var link = $"{_urls.Frontend}/confirm-email?userId={user.Id}&token={enc}";
+            var body = $@"Merhaba {user.UserName},<br/><br/>
+                           Hesabınızı onaylamak için <a href=""{link}"">tıklayın</a>.";
 
-            var subject = "MovieApp – E-posta Onay Maili (Tekrar)";
-            var body = $@"
-                Merhaba {userObj.UserName},<br/><br/>
-                Hesabınızı onaylamak için aşağıdaki linke tıklayın:<br/>
-                <a href=""{confirmLink}"">E-posta Adresinizi Doğrulayın</a><br/><br/>
-                Eğer bu istekte bulunmadıysanız, bu e-postayı görmezden gelebilirsiniz.<br/><br/>
-                MovieApp Ekibi
-            ";
-            await _emailSender.SendEmailAsync(dto.Email, subject, body);
-
-            return Ok("Onay maili tekrar gönderildi. Lütfen e-posta adresinizi kontrol edin.");
+            await _emailSender.SendEmailAsync(dto.Email, "MovieApp – E-posta Onayı", body);
+            return Ok("Onay maili tekrar gönderildi. Lütfen e-postanızı kontrol edin.");
         }
 
-        [Authorize]
-        [HttpPost("change-password")]
-        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDto dto)
+     
+
+        [HttpPost("forgot-password")]
+        [AllowAnonymous]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var userId = User.Claims.FirstOrDefault(c => c.Type == "nameid")?.Value;
-            if (userId == null)
-                return Unauthorized("Kullanıcı bilgisi bulunamadı.");
+            var (ok, err, rawToken) =
+                await _authService.GeneratePasswordResetTokenAsync(dto.Email);
 
-            var user = await _userManager.FindByIdAsync(userId);
-            if (user == null)
-                return NotFound("Kullanıcı bulunamadı.");
+            if (!ok) return BadRequest(err);
 
-            var result = await _userManager.ChangePasswordAsync(
-                user,
-                dto.CurrentPassword,
-                dto.NewPassword);
+            var user = await _authService.FindUserByEmailAsync(dto.Email);
+            var enc = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(rawToken));
+            var link = $"{_urls.Frontend}/reset-password?userId={user.Id}&token={enc}";
 
-            if (!result.Succeeded)
+            var body = $@"Merhaba {user.UserName},<br/><br/>
+                          Şifrenizi sıfırlamak için aşağıdaki linke tıklayın:<br/>
+                          <a href=""{link}"">Şifreyi Sıfırla</a><br/><br/>
+                          Eğer bu isteği siz yapmadıysanız, bu e-postayı yok sayabilirsiniz.";
+
+            await _emailSender.SendEmailAsync(dto.Email, "MovieApp – Şifre Sıfırlama", body);
+            return Ok(new { message = "Şifre sıfırlama bağlantısı gönderildi." });
+        }
+
+   
+
+        [HttpPost("reset-password")]
+        [AllowAnonymous]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto dto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            string decodedToken;
+            try
             {
-                foreach (var err in result.Errors)
-                    ModelState.AddModelError(err.Code, err.Description);
-                return BadRequest(ModelState);
+                decodedToken = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(dto.Token));
+            }
+            catch
+            {
+                return BadRequest("Token çözümlenemedi.");
             }
 
-            return Ok("Şifreniz başarıyla değiştirildi.");
+            var (ok, err) = await _authService.ResetPasswordAsync(
+                                dto.UserId.ToString(),
+                                decodedToken,
+                                dto.NewPassword);
+
+            return ok
+                ? Ok(new { message = "Şifreniz başarıyla güncellendi." })
+                : BadRequest(err);
+        }
+
+      
+
+        [HttpPost("change-password")]
+        [Authorize]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDto dto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null) return Unauthorized();
+
+            var res = await _userManager.ChangePasswordAsync(user, dto.CurrentPassword, dto.NewPassword);
+            if (!res.Succeeded)
+            {
+                var errors = string.Join(" | ", res.Errors.Select(e => e.Description));
+                return BadRequest(errors);
+            }
+
+            return Ok(new { message = "Şifreniz başarıyla değiştirildi." });
         }
     }
 }

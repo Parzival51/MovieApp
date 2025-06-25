@@ -38,32 +38,28 @@ namespace MovieApp.Business.Concrete
             _logger = logger;
         }
 
-        public async Task<IDataResult<TokenResponseDto>> RegisterAsync(RegisterDto registerDto)
+        public async Task<IDataResult<TokenResponseDto>> RegisterAsync(RegisterDto dto)
         {
             var user = new User
             {
-                UserName = registerDto.UserName,
-                DisplayName = registerDto.DisplayName,
-                Email = registerDto.Email
+                UserName = dto.UserName,
+                DisplayName = dto.DisplayName,
+                Email = dto.Email
             };
 
-            var createResult = await _userManager.CreateAsync(user, registerDto.Password);
-            if (!createResult.Succeeded)
+            var create = await _userManager.CreateAsync(user, dto.Password);
+            if (!create.Succeeded)
             {
-                var messages = createResult.Errors
-                                           .Select(e => e.Description)
-                                           .Where(d => !string.IsNullOrEmpty(d));
-                var combined = string.Join(" | ", messages);
-                _logger.LogWarning("Kayıt başarısız: {Errors}", combined);
-                return new ErrorDataResult<TokenResponseDto>(combined);
+                var msg = string.Join(" | ", create.Errors.Select(e => e.Description));
+                return new ErrorDataResult<TokenResponseDto>(msg);
             }
 
             await _userManager.AddToRoleAsync(user, "User");
 
-            var token = await _jwtService.CreateTokenAsync(user);
-            _logger.LogInformation("Yeni kullanıcı kayıt oldu: {Email}", user.Email);
-            return new SuccessDataResult<TokenResponseDto>(token, "Kayıt ve rol atama başarılı");
+            return new SuccessDataResult<TokenResponseDto>(null,
+                "Kayıt başarılı; e-posta doğrulaması bekleniyor");
         }
+
 
         public async Task<IDataResult<TokenResponseDto>> LoginAsync(LoginDto loginDto)
         {

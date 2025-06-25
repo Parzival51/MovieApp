@@ -1,8 +1,8 @@
 import React, { useCallback, useState, useMemo } from 'react';
-import useFetch from '../hooks/useFetch';
-import { getAllUsers, deleteUser, updateUserRoles } from '../api/users';
-import DataTable from '../components/DataTable';
-import RoleModal from '../components/RoleModal';
+import useFetch from '../../hooks/useFetch';
+import { getAllUsers, deleteUser, updateUserRoles } from '../../api/users';
+import DataTable from '../../components/DataTable';
+import RoleModal from '../../components/RoleModal';
 
 export default function AdminUsersPage() {
   const { data, loading, error, refetch } = useFetch(getAllUsers, []);

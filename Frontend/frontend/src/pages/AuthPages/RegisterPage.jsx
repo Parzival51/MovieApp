@@ -1,36 +1,52 @@
-// src/pages/AuthPages/RegisterPage.jsx
-import React, { useState } from 'react';
-import Layout   from '../../components/Layout';
-import Field    from '../../components/Field';
-import Button   from '../../components/Button';
-import useAuth  from '../../hooks/useAuth';
+import React, { useState } from "react";
+import Layout   from "../../components/Layout";
+import Field    from "../../components/Field";
+import Button   from "../../components/Button";
+import useAuth  from "../../hooks/useAuth";
 
 export default function RegisterPage() {
   const { register } = useAuth();
-  const [displayName, setDisplayName] = useState('');
-  const [email,       setEmail]       = useState('');
-  const [userName,    setUserName]    = useState('');
-  const [password,    setPassword]    = useState('');
-  const [confirmPass, setConfirmPass] = useState('');
-  const [error,       setError]       = useState(null);
-  const [info,        setInfo]        = useState(null);
-  const [loading,     setLoading]     = useState(false);
+
+  const [displayName, setDisplayName] = useState("");
+  const [email,       setEmail]       = useState("");
+  const [userName,    setUserName]    = useState("");
+  const [password,    setPassword]    = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
+
+  const [error, setError] = useState(null);
+  const [info,  setInfo]  = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async e => {
     e.preventDefault();
+
     if (password !== confirmPass) {
-      setError('Şifreler uyuşmuyor');
+      setError("Şifreler uyuşmuyor");
       return;
     }
+
     setLoading(true);
     setError(null);
     setInfo(null);
 
     try {
-      const res = await register({ userName, displayName, email, password });
-      setInfo(res.Message || 'Kayıt başarılı. Lütfen e-posta adresinizi doğrulayın.');
+      const { message } = await register({
+        userName,
+        displayName,
+        email,
+        password
+      });
+
+      setInfo(message);
     } catch (err) {
-      setError(err.response?.data || 'Kayıt başarısız');
+      const msg =
+        err.response?.data?.message ||  
+        err.response?.data?.Message ||   
+        err.response?.data ||            
+        err.message ||                  
+        "Kayıt başarısız";
+
+      setError(msg);
     } finally {
       setLoading(false);
     }
@@ -110,7 +126,7 @@ export default function RegisterPage() {
             className="w-full"
             disabled={loading}
           >
-            {loading ? 'Kayıt Yapılıyor…' : 'Kayıt Ol'}
+            {loading ? "Kayıt Yapılıyor…" : "Kayıt Ol"}
           </Button>
         </form>
       </div>
